@@ -1,4 +1,4 @@
-### Hi there 👋
+<!--### Hi there 👋-->
 
 <!--
 **jahidcs/jahidcs** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
@@ -14,3 +14,5 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
+
+![LinkedinBanner](https://github.com/jahidcs/jahidcs/assets/107682648/adbddeff-15c1-49a7-ab27-2bc35b383528)
