@@ -1,16 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/styles/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/styles/style.css" />
     <title>Jahid's Portfolio</title>
-</head>
-<body>
-    <div>
-        <h1>Jahid Hassan Shamim</h1>
-        <h3>Software Engineer</h3>
-        <p>*** This is Under development ***</p>
+  </head>
+  <body>
+    <nav>
+      <div class="branding">Jahid</div>
+      <div class="options">
+        <a href="#about"><span>01.</span> About</a>
+        <a href="#experience"><span>02.</span> Experience</a>
+        <a href="#projects"><span>03.</span> Projects</a>
+        <a href="#contact"><span>04.</span> Contact</a>
+      </div>
+    </nav>
+
+    <div class="content">
+      <section id="about">
+        <h2>About Me</h2>
+        <div class="card">
+          <img src="assets/image/jahidcs.jpg" alt="Jahid Hassan Shamim" />
+          <h1 id="name"></h1>
+          <h1 id="profession"></h1>
+          <p id="bio"></p>
+        </div>
+      </section>
+
+      <!-- <section id="experience">
+        <h2>Experience</h2>
+        <ul>
+          <li>
+            <h3>Software Developer at Amdocs</h3>
+            <p>July 2020 - June 2022</p>
+            <p>
+              Worked on the development of user acceptance testing (UAT) and
+              several software projects aimed at improving customer experience
+              and operational efficiency.
+            </p>
+          </li>
+          <li>
+            <h3>Software Engineer at Tata Steel</h3>
+            <p>June 2022 - Present</p>
+            <p>
+              Leading various impactful marketing initiatives and collaborating
+              with cross-functional teams to drive business growth.
+            </p>
+          </li>
+        </ul>
+      </section>
+
+      <section id="projects">
+        <h2>Projects</h2>
+        <ul>
+          <li>
+            <h3>Project 1</h3>
+            <p>
+              Developed a scalable web application to manage company-wide
+              communications.
+            </p>
+          </li>
+          <li>
+            <h3>Project 2</h3>
+            <p>
+              Implemented a machine learning model to predict customer churn,
+              improving retention rates by 20%.
+            </p>
+          </li>
+          <li>
+            <h3>Project 3</h3>
+            <p>
+              Designed and deployed an automated testing framework that reduced
+              testing time by 40%.
+            </p>
+          </li>
+        </ul>
+      </section> -->
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>
+          You can reach me at:
+          <a
+            id="contact-email"
+            href="mailto:jahid.cseq@gmail.com"
+            style="color: brown; font-weight: bold"
+          ></a>
+        </p>
+      </section>
     </div>
-</body>
+
+    <footer>
+      <p>&copy; 2024 Jahid Hassan Shamim</p>
+    </footer>
+    <script src="/assets/scripts/scripts.js"></script>
+  </body>
 </html>
