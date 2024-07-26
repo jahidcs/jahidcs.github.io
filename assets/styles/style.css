@@ -17,7 +17,7 @@ nav {
   position: fixed;
   background-color: #0d1117;
   padding: 20px;
-  /* border-bottom: 2px solid #30363d; */
+  /* border-bottom: 1px solid #30363d; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -31,6 +31,8 @@ nav .branding {
   color: brown;
   font-weight: bold;
   font-size: 2rem;
+  padding: 5px;
+  border: 1px solid brown;
 }
 
 nav a {
@@ -64,20 +66,10 @@ section h2 {
   /* border-bottom: 2px solid #30363d;
   padding-bottom: 0.5rem; */
 }
-section p,
-section ul {
+section p {
   color: #c9d1d9;
 }
-section ul {
-  list-style-type: none;
-  padding: 0;
-}
-section ul li {
-  background: #21262d;
-  margin: 0.5rem 0;
-  padding: 1rem;
-  border-radius: 5px;
-}
+
 .card {
   background: #21262d;
   margin: 1rem 0;
@@ -109,6 +101,65 @@ section ul li {
   text-align: center;
 }
 
+.experience-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* .companies {
+  border-left: 1px solid #4c5d72;
+} */
+
+.companies ul {
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+}
+
+.companies li {
+  list-style: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-left: 1px solid #4c5d72;
+}
+.companies li:hover {
+  cursor: pointer;
+  background: #21262d;
+  color: brown;
+  font-weight: bold;
+  transition: 0.8s;
+}
+
+.companies li.selected {
+  cursor: pointer;
+  background: #21262d;
+  color: brown;
+  font-weight: bold;
+  border-left: 1px solid brown;
+}
+
+.details {
+  width: 80%;
+  padding-left: 20px;
+}
+
+.details h3 {
+  margin: 0;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.details h4 {
+  /* margin: 0; */
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+.details .period {
+  font-size: 0.8rem;
+}
+.details .exp-details {
+  text-align: justify;
+}
+
 footer {
   text-align: center;
   padding: 10px;
@@ -126,6 +177,44 @@ footer {
     flex-direction: column;
     justify-content: center;
   }
+
+  .companies li {
+    list-style: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-left: 0.5px solid #4c5d72;
+  }
+
+  .companies li.selected {
+    cursor: pointer;
+    background: #21262d;
+    color: brown;
+    font-weight: bold;
+    border-left: 1px solid brown;
+  }
+
+  .details {
+    width: 80%;
+    padding-left: 10px;
+  }
+
+  .details h3 {
+    margin: 0;
+    font-weight: bold;
+    font-size: 0.9rem;
+  }
+  .details h4 {
+    /* margin: 0; */
+    font-weight: bold;
+    font-size: 0.7rem;
+  }
+  .details .period {
+    font-size: 0.6rem;
+  }
+  .details .exp-details {
+    text-align: justify;
+    font-size: 0.7rem;
+  }
 }
 
 @media screen and (max-width: 570px) {
@@ -133,11 +222,48 @@ footer {
     width: 100%;
     background-color: #0d1117;
     padding: 20px;
-    border-bottom: 2px solid #30363d;
     display: flex;
     flex-direction: column;
     justify-content: center;
     font-size: small;
+  }
+
+  .companies li {
+    list-style: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-left: 0.5px solid #4c5d72;
+  }
+
+  .companies li.selected {
+    cursor: pointer;
+    background: #21262d;
+    color: brown;
+    font-weight: bold;
+    border-left: 1px solid brown;
+  }
+
+  .details {
+    width: 80%;
+    padding-left: 10px;
+  }
+
+  .details h3 {
+    margin: 0;
+    font-weight: bold;
+    font-size: 0.9rem;
+  }
+  .details h4 {
+    /* margin: 0; */
+    font-weight: bold;
+    font-size: 0.7rem;
+  }
+  .details .period {
+    font-size: 0.6rem;
+  }
+  .details .exp-details {
+    text-align: justify;
+    font-size: 0.7rem;
   }
 }
 
@@ -146,10 +272,47 @@ footer {
     width: 100%;
     background-color: #0d1117;
     padding: 20px;
-    border-bottom: 2px solid #30363d;
     display: flex;
     flex-direction: column;
     justify-content: center;
     font-size: 0.6rem;
+  }
+
+  .companies li {
+    list-style: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-left: 0.5px solid #4c5d72;
+  }
+
+  .companies li.selected {
+    cursor: pointer;
+    background: #21262d;
+    color: brown;
+    font-weight: bold;
+    border-left: 1px solid brown;
+  }
+
+  .details {
+    width: 80%;
+    padding-left: 10px;
+  }
+
+  .details h3 {
+    margin: 0;
+    font-weight: bold;
+    font-size: 0.9rem;
+  }
+  .details h4 {
+    /* margin: 0; */
+    font-weight: bold;
+    font-size: 0.7rem;
+  }
+  .details .period {
+    font-size: 0.6rem;
+  }
+  .details .exp-details {
+    text-align: justify;
+    font-size: 0.7rem;
   }
 }

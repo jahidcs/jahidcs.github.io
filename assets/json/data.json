@@ -3,5 +3,21 @@
   "photo": "",
   "contact": ["jahid.cseq@gmail.com"],
   "profession": "Software Engineer",
-  "bio": "Allow me to present myself as a dedicated Software Engineer whose passion lies in the intricate dance of database design, API development, and system design. I fervently aspire to contribute my skills to projects of grander scale."
+  "bio": "Allow me to present myself as a dedicated Software Engineer whose passion lies in the intricate dance of database design, API development, and system design. I fervently aspire to contribute my skills to projects of grander scale.",
+  "experience": [
+    {
+      "organization": "Winning Bees",
+      "position": "Junior Software Engineer",
+      "start": "December 2022",
+      "end": "December 2023",
+      "detail": "&#10146; Worked on 4 different project that are built with Flutter like content management app, Book app with Google book API for Readers community, PDF reader app with note taking and PDF creation functionality with an experience of deploying and implementing referrel points allocation on sharing\n &#10146; Recently, Collaborating on 2 Backend projects where implemented Custom Admin panel, database design, API building, Cronjob, Securing APIs with APIKey"
+    },
+    {
+      "organization": "HealthX BD",
+      "position": "Intern Software Engineer",
+      "start": "April 2022",
+      "end": "August 2022",
+      "detail": "&#10146; Worked on Doctor and Patient portal (Personal Profiling for doctor and patient) for managing appointments and Chambers.\n&#10146; Designing the user Interface and Integrated all APIs based on requirements."
+    }
+  ]
 }
