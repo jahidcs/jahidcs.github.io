@@ -1,9 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap");
 
-* {
-  top: 0;
-}
-
 body {
   font-family: "Roboto Mono", monospace;
   margin: 0;
@@ -12,39 +8,55 @@ body {
   color: whitesmoke;
 }
 
-nav {
+/* Header Part */
+header {
+  top: 0;
   width: 100%;
   position: fixed;
   background-color: #0d1117;
-  padding: 20px;
-  /* border-bottom: 1px solid #30363d; */
+  box-sizing: border-box;
+  transition: top 0.3s ease-in-out;
+}
+
+header.hidden {
+  top: -80px;
+}
+
+nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-nav div {
-  display: inline;
+nav .branding {
+  margin-left: 3rem;
 }
 
-nav .branding {
-  color: brown;
-  font-weight: bold;
-  font-size: 2rem;
-  padding: 5px;
-  border: 1px solid brown;
+nav ol {
+  display: flex;
+  margin: 0;
+  padding: 0;
 }
 
 nav a {
   text-decoration: none;
   color: whitesmoke;
-  margin-right: 1.5rem;
   font-weight: bold;
+  margin-right: 3rem;
 }
 
-nav a span {
-  color: brown;
+/* Slide in effect */
+nav {
+  transform: translateY(-20px);
+  opacity: 0;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
+
+nav.loaded {
+  transform: translateY(0);
+  opacity: 1;
+}
+/* Header Part End */
 
 .content {
   margin-top: 100px;

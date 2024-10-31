@@ -1,3 +1,20 @@
+const header = document.querySelector("header");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 100) {
+    // Adjust the threshold as needed
+    header.classList.add("hidden");
+  } else {
+    header.classList.remove("hidden");
+  }
+});
+
+const navElement = document.querySelector("nav");
+
+setTimeout(() => {
+  navElement.classList.add("loaded");
+}, 1000);
+
 fetch("/assets/json/data.json")
   .then((response) => response.json())
   .then((data) => {
