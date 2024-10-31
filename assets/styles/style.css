@@ -45,6 +45,11 @@ nav a {
   margin-right: 3rem;
 }
 
+nav a.active {
+  color: #f00;
+  background-color: #21262d;
+}
+
 /* Slide in effect */
 nav {
   transform: translateY(-20px);

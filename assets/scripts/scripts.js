@@ -1,19 +1,38 @@
 const header = document.querySelector("header");
+let lastScrollY = 0;
+const threshold = 1;
+header.classList.remove("hidden");
 
 window.addEventListener("scroll", () => {
-  if (window.scrollY > 100) {
-    // Adjust the threshold as needed
+  const currentScrollY = window.scrollY;
+
+  if (currentScrollY > lastScrollY + threshold) {
     header.classList.add("hidden");
-  } else {
+  } else if (currentScrollY < lastScrollY - threshold) {
     header.classList.remove("hidden");
   }
+
+  lastScrollY = currentScrollY;
 });
 
+// Effect on appearing NAV
 const navElement = document.querySelector("nav");
 
 setTimeout(() => {
   navElement.classList.add("loaded");
-}, 1000);
+}, 100);
+
+const navLinks = document.querySelectorAll("nav a");
+
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    navLinks.forEach((link) => link.classList.remove("active"));
+
+    // Add the 'active' class to the clicked link
+
+    link.classList.add("active");
+  });
+});
 
 fetch("/assets/json/data.json")
   .then((response) => response.json())
