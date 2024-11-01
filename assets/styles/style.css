@@ -1,11 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap");
 
 :root {
-  --background-color: #eeeeee;
+  --background-color: #eceff1;
   --primary-color: #fff;
   --text-color: black;
   --secondary-text-color: #212121;
   --accent-color: #f00;
+  --texture-color: #cfd8dc;
 }
 
 body {
@@ -40,6 +41,10 @@ nav {
 nav .branding {
   margin-left: 3rem;
 }
+nav .branding span {
+  color: var(--accent-color);
+  font-weight: bolder;
+}
 
 nav ol {
   display: flex;
@@ -72,55 +77,52 @@ nav.loaded {
 /* Header Part End */
 
 .content {
-  margin-top: 100px;
+  padding: 0 10rem;
 }
 
-section {
-  max-width: 900px;
-  margin: 2rem auto;
-  padding: 2rem;
-  background-color: var(--primary-color);
-  border-radius: 8px;
-}
-section h2 {
-  color: var(--secondary-text-color);
-  font-size: 2rem;
+.about-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-section p {
-  color: var(--secondary-text-color);
+.my-about {
+  width: 70%;
 }
 
-.card {
-  margin: 1rem 0;
-  padding: 1rem;
-  border-radius: 8px;
+.my-about #name {
+  font-size: 40px;
+}
+.my-about #profession {
+  font-size: 30px;
+  margin-top: -15px;
+}
+.my-about #bio {
+  margin-top: -15px;
+  margin: 10px 0 25px;
+  color: var(--text-color);
+}
+.my-img {
+  height: 33vh;
+  width: 33vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 1px solid var(--accent-color);
+}
+.my-img img {
+  height: 32vh;
+  width: 32vh;
+  border-radius: 50%;
+}
+.experience-section {
+  height: 90vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: center;
 }
-.card img {
-  width: 100px;
-  height: 100px;
-  border-radius: 10%;
-  margin-bottom: 1rem;
-}
-.card h3 {
-  /* color: #58a6ff; */
-  color: var(--text-color);
-  margin: 0.5rem 0;
-}
-.card h1 {
-  /* color: #58a6ff; */
-  color: var(--text-color);
-  margin: 0.5rem 0;
-}
-
-.card p {
-  color: var(--secondary-text-color);
-  text-align: center;
-}
-
 .experience-container {
   display: flex;
   justify-content: space-between;
@@ -136,14 +138,14 @@ section p {
   list-style: none;
   cursor: pointer;
   padding: 10px 20px;
-  border-left: 1px solid #ddd;
+  border-left: 1px solid var(--texture-color);
 }
 .companies li:hover {
   cursor: pointer;
   background: #eee;
   color: var(--accent-color);
   font-weight: bold;
-  transition: 0.8s;
+  transition: 1s;
 }
 
 .companies li.selected {
@@ -173,6 +175,49 @@ section p {
 }
 .details .exp-details {
   text-align: justify;
+}
+
+/* SKILLS */
+.skill-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.category ul {
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+}
+
+.category li {
+  list-style: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-left: 1px solid var(--texture-color);
+}
+.category li:hover {
+  cursor: pointer;
+  background: #eee;
+  color: var(--accent-color);
+  font-weight: bold;
+  transition: 1s;
+}
+
+.category li.selected {
+  cursor: pointer;
+  background: #eee;
+  color: var(--accent-color);
+  font-weight: bold;
+  border-left: 1px solid var(--accent-color);
+}
+
+.tools {
+  width: 80%;
+  padding-left: 20px;
+}
+
+.tools ul {
+  list-style: none;
 }
 
 footer {
