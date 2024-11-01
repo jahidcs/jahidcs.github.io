@@ -5,11 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/styles/style.css" />
     <title>Jahid's Portfolio</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
       <nav>
-        <h1 class="branding">Jahid Hassan Shamim</h1>
+        <h1 class="branding">Jahid Hassan Shamim<span>.</span></h1>
         <div class="options">
           <ol>
             <li>
@@ -34,20 +38,46 @@
 
     <div class="content">
       <section id="about">
-        <h2>About Me</h2>
-        <div class="card">
-          <img src="assets/image/jahidcs.jpg" alt="Jahid Hassan Shamim" />
-          <h1 id="name"></h1>
-          <h1 id="profession"></h1>
-          <p id="bio"></p>
+        <div class="about-container">
+          <div class="my-about">
+            <h1 id="name">Jahid Hassan Shamim</h1>
+            <h2 id="profession">Software Engineer</h2>
+            <p id="bio">
+              A dedicated software engineer passionate about crafting elegant
+              and efficient solutions.
+            </p>
+            <!-- <div class="btn-sci">
+            <div class="sci">
+              <a href=""><i class="bx bxl-github"></i></a>
+              <a href=""><i class="bx bxl-linkedin-square"></i></a>
+              <a href=""><i class="bx bxl-whatsapp"></i></a>
+              <a href=""><i class="bx bxl-telegram"></i></a>
+              <a href=""><i class="bx bxl-messenger"></i></a>
+            </div>
+          </div> -->
+          </div>
+          <div class="my-img">
+            <img
+              src="assets/image/jahidcs.jpg"
+              alt="Jahid Hassan Shamim"
+              class="profile-image"
+            />
+          </div>
         </div>
       </section>
 
       <section id="experience">
-        <h2>Experience</h2>
-        <div class="experience-container">
-          <div class="companies"></div>
-          <div class="details"></div>
+        <div class="experience-section">
+          <h2>Experience</h2>
+          <div class="experience-container">
+            <div class="companies"></div>
+            <div class="details"></div>
+          </div>
+          <h2>Skills</h2>
+          <div class="skill-container">
+            <div class="category"></div>
+            <div class="tools"></div>
+          </div>
         </div>
       </section>
 
