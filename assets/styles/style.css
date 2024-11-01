@@ -1,11 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap");
 
+:root {
+  --background-color: #eeeeee;
+  --primary-color: #fff;
+  --text-color: black;
+  --secondary-text-color: #212121;
+  --accent-color: #f00;
+}
+
 body {
   font-family: "Roboto Mono", monospace;
   margin: 0;
   padding: 0;
-  background-color: #0d1117;
-  color: whitesmoke;
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 /* Header Part */
@@ -13,9 +21,10 @@ header {
   top: 0;
   width: 100%;
   position: fixed;
-  background-color: #0d1117;
+  background-color: var(--primary-color);
   box-sizing: border-box;
   transition: top 0.3s ease-in-out;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 header.hidden {
@@ -40,14 +49,13 @@ nav ol {
 
 nav a {
   text-decoration: none;
-  color: whitesmoke;
+  color: var(--text-color);
   font-weight: bold;
   margin-right: 3rem;
 }
 
 nav a.active {
-  color: #f00;
-  background-color: #21262d;
+  color: var(--accent-color);
 }
 
 /* Slide in effect */
@@ -71,24 +79,19 @@ section {
   max-width: 900px;
   margin: 2rem auto;
   padding: 2rem;
-  background-color: #161b22;
+  background-color: var(--primary-color);
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 section h2 {
-  color: whitesmoke;
-
-  /* color: #58a6ff; */
+  color: var(--secondary-text-color);
   font-size: 2rem;
-  /* border-bottom: 2px solid #30363d;
-  padding-bottom: 0.5rem; */
 }
+
 section p {
-  color: #c9d1d9;
+  color: var(--secondary-text-color);
 }
 
 .card {
-  background: #21262d;
   margin: 1rem 0;
   padding: 1rem;
   border-radius: 8px;
@@ -104,17 +107,17 @@ section p {
 }
 .card h3 {
   /* color: #58a6ff; */
-  color: whitesmoke;
+  color: var(--text-color);
   margin: 0.5rem 0;
 }
 .card h1 {
   /* color: #58a6ff; */
-  color: whitesmoke;
+  color: var(--text-color);
   margin: 0.5rem 0;
 }
 
 .card p {
-  color: #8b949e;
+  color: var(--secondary-text-color);
   text-align: center;
 }
 
@@ -122,10 +125,6 @@ section p {
   display: flex;
   justify-content: space-between;
 }
-
-/* .companies {
-  border-left: 1px solid #4c5d72;
-} */
 
 .companies ul {
   list-style: none;
@@ -137,22 +136,22 @@ section p {
   list-style: none;
   cursor: pointer;
   padding: 10px 20px;
-  border-left: 1px solid #4c5d72;
+  border-left: 1px solid #ddd;
 }
 .companies li:hover {
   cursor: pointer;
-  background: #21262d;
-  color: brown;
+  background: #eee;
+  color: var(--accent-color);
   font-weight: bold;
   transition: 0.8s;
 }
 
 .companies li.selected {
   cursor: pointer;
-  background: #21262d;
-  color: brown;
+  background: #eee;
+  color: var(--accent-color);
   font-weight: bold;
-  border-left: 1px solid brown;
+  border-left: 1px solid var(--accent-color);
 }
 
 .details {
@@ -166,7 +165,6 @@ section p {
   font-size: 1.2rem;
 }
 .details h4 {
-  /* margin: 0; */
   font-weight: bold;
   font-size: 0.9rem;
 }
@@ -180,34 +178,56 @@ section p {
 footer {
   text-align: center;
   padding: 10px;
-  background-color: #161b22;
-  color: #8b949e;
+  background-color: var(--primary-color);
+  color: var(--secondary-text-color);
 }
 
 @media screen and (max-width: 768px) {
+  header.hidden {
+    top: -110px;
+  }
   nav {
-    width: 100%;
-    background-color: #0d1117;
-    padding: 20px;
-    border-bottom: 2px solid #30363d;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+  }
+
+  nav .options {
+    padding: 10px;
+  }
+
+  nav .branding {
+    margin-left: 0;
+  }
+
+  nav ol {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bold;
+    margin: 1.25rem;
   }
 
   .companies li {
     list-style: none;
     cursor: pointer;
     padding: 5px 10px;
-    border-left: 0.5px solid #4c5d72;
+    border-left: 0.5px solid #ddd;
   }
 
   .companies li.selected {
     cursor: pointer;
-    background: #21262d;
-    color: brown;
+    background: #eee;
+    color: var(--accent-color);
     font-weight: bold;
-    border-left: 1px solid brown;
+    border-left: 1px solid var(--accent-color);
   }
 
   .details {
@@ -235,29 +255,51 @@ footer {
 }
 
 @media screen and (max-width: 570px) {
+  header.hidden {
+    top: -110px;
+  }
   nav {
-    width: 100%;
-    background-color: #0d1117;
-    padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-size: small;
+    align-items: center;
+  }
+
+  nav .options {
+    padding: 10px;
+  }
+
+  nav .branding {
+    margin-left: 0;
+  }
+
+  nav ol {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bold;
+    margin: 0.65rem;
   }
 
   .companies li {
     list-style: none;
     cursor: pointer;
     padding: 5px 10px;
-    border-left: 0.5px solid #4c5d72;
+    border-left: 0.5px solid #ddd;
   }
 
   .companies li.selected {
     cursor: pointer;
-    background: #21262d;
-    color: brown;
+    background: #eee;
+    color: var(--accent-color);
     font-weight: bold;
-    border-left: 1px solid brown;
+    border-left: 1px solid var(--accent-color);
   }
 
   .details {
@@ -287,7 +329,7 @@ footer {
 @media screen and (max-width: 479px) {
   nav {
     width: 100%;
-    background-color: #0d1117;
+    background-color: #f5f5f5;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -299,15 +341,15 @@ footer {
     list-style: none;
     cursor: pointer;
     padding: 5px 10px;
-    border-left: 0.5px solid #4c5d72;
+    border-left: 0.5px solid #ddd;
   }
 
   .companies li.selected {
     cursor: pointer;
-    background: #21262d;
-    color: brown;
+    background: #eee;
+    color: var(--accent-color);
     font-weight: bold;
-    border-left: 1px solid brown;
+    border-left: 1px solid var(--accent-color);
   }
 
   .details {
