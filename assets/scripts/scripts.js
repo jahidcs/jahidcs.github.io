@@ -31,24 +31,22 @@ navLinks.forEach((link) => {
   });
 });
 
+const companiesList = document.querySelector(".companies");
+const detailsContainer = document.querySelector(".details");
+
+const categoryList = document.querySelector(".category");
+const toolsContainer = document.querySelector(".tools");
+
 fetch("/assets/json/data.json")
   .then((response) => response.json())
   .then((data) => {
+    // BASIC INFO
     document.getElementById("name").textContent = data.name;
     document.getElementById("profession").textContent = data.profession;
     document.getElementById("bio").textContent = data.bio;
     document.getElementById("contact-email").textContent = data.contact[0];
-  })
-  .catch((error) => {
-    console.error("Error fetching data:", error);
-  });
 
-const companiesList = document.querySelector(".companies");
-const detailsContainer = document.querySelector(".details");
-
-fetch("/assets/json/data.json")
-  .then((response) => response.json())
-  .then((data) => {
+    // EXPERIENCE
     data.experience.forEach((company, index) => {
       const listItem = document.createElement("li");
       listItem.textContent = company.organization;
@@ -77,6 +75,48 @@ fetch("/assets/json/data.json")
           `;
       });
     });
+
+    // SKILLS
+    data.skill.forEach((skill, index) => {
+      const listItem = document.createElement("li");
+      listItem.textContent = skill.category;
+      listItem.dataset.categoryIndex = index;
+      categoryList.appendChild(listItem);
+
+      listItem.addEventListener("click", () => {
+        // Remove the 'selected' class from all list items
+        const selectedItem = document.querySelector(".category li.selected");
+
+        if (selectedItem) {
+          selectedItem.classList.remove("selected");
+        }
+
+        // Add the 'selected' class to the clicked list item
+        listItem.classList.add("selected");
+
+        const categoryIndex = listItem.dataset.categoryIndex;
+        const categoryDetails = data.skill[categoryIndex];
+
+        // Clear the tools container before adding new items
+        toolsContainer.innerHTML = "";
+
+        // Create a list element for each tool
+        const toolsList = document.createElement("ul");
+        categoryDetails.tools.forEach((tool) => {
+          const toolItem = document.createElement("li");
+          // toolItem.textContent = tool;
+          toolItem.innerHTML = `&#10146; ${tool}`;
+          toolsList.appendChild(toolItem);
+        });
+
+        // Add the list of tools to the tools container
+        toolsContainer.appendChild(toolsList);
+      });
+    });
+
+    // Select the first company as default
+    const firstCategory = categoryList.querySelector("li");
+    firstCategory.click();
 
     // Select the first company as default
     const firstCompany = companiesList.querySelector("li");

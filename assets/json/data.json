@@ -26,5 +26,19 @@
       "end": "August 2022",
       "detail": "&#10146; Worked on Doctor and Patient portal (Personal Profiling for doctor and patient) for managing appointments and Chambers.\n&#10146; Designing the user Interface and Integrated all APIs based on requirements."
     }
+  ],
+  "skill": [
+    {
+      "category": "Programming",
+      "tools": ["Python", "JavaScript"]
+    },
+    {
+      "category": "Database",
+      "tools": ["MySQL", "PostgreSQL"]
+    },
+    {
+      "category": "Cloud",
+      "tools": ["AWS", "GCP"]
+    }
   ]
 }
