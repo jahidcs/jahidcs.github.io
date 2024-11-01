@@ -6,6 +6,13 @@
   "bio": "Allow me to present myself as a dedicated Software Engineer whose passion lies in the intricate dance of database design, API development, and system design. I fervently aspire to contribute my skills to projects of grander scale.",
   "experience": [
     {
+      "organization": "Shpper",
+      "position": "Software Engineer",
+      "start": "May 2024",
+      "end": "Till now",
+      "detail": "Working on Projects"
+    },
+    {
       "organization": "Winning Bees",
       "position": "Junior Software Engineer",
       "start": "December 2022",
@@ -18,6 +25,34 @@
       "start": "April 2022",
       "end": "August 2022",
       "detail": "&#10146; Worked on Doctor and Patient portal (Personal Profiling for doctor and patient) for managing appointments and Chambers.\n&#10146; Designing the user Interface and Integrated all APIs based on requirements."
+    }
+  ],
+  "skill": [
+    {
+      "category": "Programming",
+      "tools": ["Python", "JavaScript", "Dart"]
+    },
+    {
+      "category": "Database",
+      "tools": ["MySQL", "PostgreSQL"]
+    },
+    {
+      "category": "Site Reliability",
+      "tools": [
+        "Cloud - AWS",
+        "CI/CD - Github",
+        "Data Serialization - YAML, JSON",
+        "Docker",
+        "Kubernetics"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "type": "Graduation",
+      "degree": "B.Sc in Computer Science & Engineering",
+      "institute": "Daffodil International University",
+      "timeline": "2018-2022"
     }
   ]
 }
