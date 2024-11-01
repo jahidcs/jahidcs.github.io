@@ -331,8 +331,62 @@ footer {
     margin: 1.25rem;
   }
 
+  .content {
+    padding: 0 3rem;
+  }
+
+  .about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .my-about {
+    width: 100%;
+  }
+
+  .my-about #name {
+    font-size: 30px;
+  }
+  .my-about #profession {
+    font-size: 20px;
+    margin-top: -15px;
+  }
+  .my-about #bio {
+    margin-top: -15px;
+    margin: 10px 0 25px;
+    color: var(--text-color);
+    text-align: justify;
+  }
+
+  .my-about .social .sci a {
+    text-decoration: none;
+    display: inline-flex;
+    font-size: 15px;
+    padding: 4px;
+    border: 1px solid var(--text-color);
+    border-radius: 50%;
+    color: var(--secondary-text-color);
+  }
+  .my-img {
+    height: 25vh;
+    width: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid var(--accent-color);
+  }
+  .my-img img {
+    height: 24vh;
+    width: 24vh;
+    border-radius: 50%;
+  }
+
   .companies li {
     list-style: none;
+    font-size: small;
     cursor: pointer;
     padding: 5px 10px;
     border-left: 0.5px solid #ddd;
@@ -367,6 +421,113 @@ footer {
   .details .exp-details {
     text-align: justify;
     font-size: 0.7rem;
+  }
+
+  /* SKILLS */
+  .skill-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .category ul {
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+  }
+
+  .category li {
+    font-size: small;
+    list-style: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-left: 1px solid var(--texture-color);
+  }
+  .category li:hover {
+    cursor: pointer;
+    background: #eee;
+    color: var(--accent-color);
+    font-weight: bold;
+    transition: 1s;
+  }
+
+  .category li.selected {
+    cursor: pointer;
+    background: #eee;
+    color: var(--accent-color);
+    font-weight: bold;
+    border-left: 1px solid var(--accent-color);
+  }
+
+  .tools {
+    width: 80%;
+    padding-left: 20px;
+  }
+
+  .tools h4 {
+    margin: 0;
+    font-weight: bold;
+    font-size: 0.7rem;
+  }
+
+  .tools ul {
+    list-style: none;
+    font-size: 0.7rem;
+  }
+
+  /* DEGREE */
+  .ed-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .degree ul {
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+  }
+
+  .degree li {
+    font-size: small;
+    list-style: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-left: 1px solid var(--texture-color);
+  }
+  .degree li:hover {
+    cursor: pointer;
+    background: #eee;
+    color: var(--accent-color);
+    font-weight: bold;
+    transition: 1s;
+  }
+
+  .degree li.selected {
+    cursor: pointer;
+    background: var(--background-color);
+    color: var(--accent-color);
+    font-weight: bold;
+    border-left: 1px solid var(--accent-color);
+  }
+
+  .degree-details {
+    width: 80%;
+    padding-left: 20px;
+  }
+
+  .degree-details h4 {
+    margin: 0;
+    font-weight: bold;
+    font-size: 0.9rem;
+  }
+  .degree-details h3 {
+    font-weight: bold;
+    font-size: 0.7rem;
+  }
+  .degree-details i {
+    font-size: 0.6rem;
+  }
+  .degree-details .exp-details {
+    text-align: justify;
   }
 }
 
@@ -403,8 +564,62 @@ footer {
     margin: 0.65rem;
   }
 
+  .content {
+    padding: 0 3rem;
+  }
+
+  .about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .my-about {
+    width: 100%;
+  }
+
+  .my-about #name {
+    font-size: 30px;
+  }
+  .my-about #profession {
+    font-size: 20px;
+    margin-top: -15px;
+  }
+  .my-about #bio {
+    margin-top: -15px;
+    margin: 10px 0 25px;
+    color: var(--text-color);
+    text-align: justify;
+  }
+
+  .my-about .social .sci a {
+    text-decoration: none;
+    display: inline-flex;
+    font-size: 15px;
+    padding: 4px;
+    border: 1px solid var(--text-color);
+    border-radius: 50%;
+    color: var(--secondary-text-color);
+  }
+  .my-img {
+    height: 25vh;
+    width: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid var(--accent-color);
+  }
+  .my-img img {
+    height: 24vh;
+    width: 24vh;
+    border-radius: 50%;
+  }
+
   .companies li {
     list-style: none;
+    font-size: small;
     cursor: pointer;
     padding: 5px 10px;
     border-left: 0.5px solid #ddd;
@@ -439,6 +654,113 @@ footer {
   .details .exp-details {
     text-align: justify;
     font-size: 0.7rem;
+  }
+
+  /* SKILLS */
+  .skill-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .category ul {
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+  }
+
+  .category li {
+    font-size: small;
+    list-style: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-left: 1px solid var(--texture-color);
+  }
+  .category li:hover {
+    cursor: pointer;
+    background: #eee;
+    color: var(--accent-color);
+    font-weight: bold;
+    transition: 1s;
+  }
+
+  .category li.selected {
+    cursor: pointer;
+    background: #eee;
+    color: var(--accent-color);
+    font-weight: bold;
+    border-left: 1px solid var(--accent-color);
+  }
+
+  .tools {
+    width: 80%;
+    padding-left: 20px;
+  }
+
+  .tools h4 {
+    margin: 0;
+    font-weight: bold;
+    font-size: 0.7rem;
+  }
+
+  .tools ul {
+    list-style: none;
+    font-size: 0.7rem;
+  }
+
+  /* DEGREE */
+  .ed-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .degree ul {
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+  }
+
+  .degree li {
+    font-size: small;
+    list-style: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-left: 1px solid var(--texture-color);
+  }
+  .degree li:hover {
+    cursor: pointer;
+    background: #eee;
+    color: var(--accent-color);
+    font-weight: bold;
+    transition: 1s;
+  }
+
+  .degree li.selected {
+    cursor: pointer;
+    background: var(--background-color);
+    color: var(--accent-color);
+    font-weight: bold;
+    border-left: 1px solid var(--accent-color);
+  }
+
+  .degree-details {
+    width: 80%;
+    padding-left: 20px;
+  }
+
+  .degree-details h4 {
+    margin: 0;
+    font-weight: bold;
+    font-size: 0.9rem;
+  }
+  .degree-details h3 {
+    font-weight: bold;
+    font-size: 0.7rem;
+  }
+  .degree-details i {
+    font-size: 0.6rem;
+  }
+  .degree-details .exp-details {
+    text-align: justify;
   }
 }
 
@@ -476,8 +798,62 @@ footer {
     margin: 0.55rem;
   }
 
+  .content {
+    padding: 0 3rem;
+  }
+
+  .about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .my-about {
+    width: 100%;
+  }
+
+  .my-about #name {
+    font-size: 30px;
+  }
+  .my-about #profession {
+    font-size: 20px;
+    margin-top: -15px;
+  }
+  .my-about #bio {
+    margin-top: -15px;
+    margin: 10px 0 25px;
+    color: var(--text-color);
+    text-align: justify;
+  }
+
+  .my-about .social .sci a {
+    text-decoration: none;
+    display: inline-flex;
+    font-size: 15px;
+    padding: 4px;
+    border: 1px solid var(--text-color);
+    border-radius: 50%;
+    color: var(--secondary-text-color);
+  }
+  .my-img {
+    height: 25vh;
+    width: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid var(--accent-color);
+  }
+  .my-img img {
+    height: 24vh;
+    width: 24vh;
+    border-radius: 50%;
+  }
+
   .companies li {
     list-style: none;
+    font-size: small;
     cursor: pointer;
     padding: 5px 10px;
     border-left: 0.5px solid #ddd;
@@ -512,5 +888,112 @@ footer {
   .details .exp-details {
     text-align: justify;
     font-size: 0.7rem;
+  }
+
+  /* SKILLS */
+  .skill-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .category ul {
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+  }
+
+  .category li {
+    font-size: small;
+    list-style: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-left: 1px solid var(--texture-color);
+  }
+  .category li:hover {
+    cursor: pointer;
+    background: #eee;
+    color: var(--accent-color);
+    font-weight: bold;
+    transition: 1s;
+  }
+
+  .category li.selected {
+    cursor: pointer;
+    background: #eee;
+    color: var(--accent-color);
+    font-weight: bold;
+    border-left: 1px solid var(--accent-color);
+  }
+
+  .tools {
+    width: 80%;
+    padding-left: 20px;
+  }
+
+  .tools h4 {
+    margin: 0;
+    font-weight: bold;
+    font-size: 0.7rem;
+  }
+
+  .tools ul {
+    list-style: none;
+    font-size: 0.7rem;
+  }
+
+  /* DEGREE */
+  .ed-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .degree ul {
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+  }
+
+  .degree li {
+    font-size: small;
+    list-style: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-left: 1px solid var(--texture-color);
+  }
+  .degree li:hover {
+    cursor: pointer;
+    background: #eee;
+    color: var(--accent-color);
+    font-weight: bold;
+    transition: 1s;
+  }
+
+  .degree li.selected {
+    cursor: pointer;
+    background: var(--background-color);
+    color: var(--accent-color);
+    font-weight: bold;
+    border-left: 1px solid var(--accent-color);
+  }
+
+  .degree-details {
+    width: 80%;
+    padding-left: 20px;
+  }
+
+  .degree-details h4 {
+    margin: 0;
+    font-weight: bold;
+    font-size: 0.9rem;
+  }
+  .degree-details h3 {
+    font-weight: bold;
+    font-size: 0.7rem;
+  }
+  .degree-details i {
+    font-size: 0.6rem;
+  }
+  .degree-details .exp-details {
+    text-align: justify;
   }
 }
