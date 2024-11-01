@@ -25,10 +25,41 @@ setTimeout(() => {
 const navLinks = document.querySelectorAll("nav a");
 
 navLinks.forEach((link) => {
-  link.addEventListener("click", () => {
+  link.addEventListener("click", (e) => {
     navLinks.forEach((link) => link.classList.remove("active"));
     link.classList.add("active");
+
+    e.preventDefault();
+    // Prevent default anchor behavior
+
+    const targetId = link.getAttribute("href");
+    const targetElement = document.querySelector(targetId);
+
+    window.scrollTo({
+      top: targetElement.offsetTop,
+      behavior: "smooth",
+    });
   });
+});
+
+window.addEventListener("load", () => {
+  const hash = window.location.hash;
+  if (hash) {
+    const targetElement = document.querySelector(hash);
+    if (targetElement) {
+      // Scroll to the target element
+      window.scrollTo({
+        top: targetElement.offsetTop,
+        behavior: "smooth",
+      });
+
+      // Highlight the corresponding navigation link
+      const targetLink = document.querySelector(`nav a[href="${hash}"]`);
+      if (targetLink) {
+        targetLink.classList.add("active");
+      }
+    }
+  }
 });
 
 const companiesList = document.querySelector(".companies");
