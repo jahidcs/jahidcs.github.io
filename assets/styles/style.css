@@ -103,6 +103,16 @@ nav.loaded {
   margin: 10px 0 25px;
   color: var(--text-color);
 }
+
+.my-about .social .sci a {
+  text-decoration: none;
+  display: inline-flex;
+  font-size: 20px;
+  padding: 4px;
+  border: 1px solid var(--text-color);
+  border-radius: 50%;
+  color: var(--secondary-text-color);
+}
 .my-img {
   height: 33vh;
   width: 33vh;
@@ -216,8 +226,69 @@ nav.loaded {
   padding-left: 20px;
 }
 
+.tools h4 {
+  margin: 0;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
 .tools ul {
   list-style: none;
+}
+
+/* DEGREE */
+.ed-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.degree ul {
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+}
+
+.degree li {
+  list-style: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-left: 1px solid var(--texture-color);
+}
+.degree li:hover {
+  cursor: pointer;
+  background: #eee;
+  color: var(--accent-color);
+  font-weight: bold;
+  transition: 1s;
+}
+
+.degree li.selected {
+  cursor: pointer;
+  background: var(--background-color);
+  color: var(--accent-color);
+  font-weight: bold;
+  border-left: 1px solid var(--accent-color);
+}
+
+.degree-details {
+  width: 80%;
+  padding-left: 20px;
+}
+
+.degree-details h4 {
+  margin: 0;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.degree-details h3 {
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+.degree-details .period {
+  font-size: 0.8rem;
+}
+.degree-details .exp-details {
+  text-align: justify;
 }
 
 footer {

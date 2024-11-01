@@ -30,15 +30,29 @@
   "skill": [
     {
       "category": "Programming",
-      "tools": ["Python", "JavaScript"]
+      "tools": ["Python", "JavaScript", "Dart"]
     },
     {
       "category": "Database",
       "tools": ["MySQL", "PostgreSQL"]
     },
     {
-      "category": "Cloud",
-      "tools": ["AWS", "GCP"]
+      "category": "Site Reliability",
+      "tools": [
+        "Cloud - AWS",
+        "CI/CD - Github",
+        "Data Serialization - YAML, JSON",
+        "Docker",
+        "Kubernetics"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "type": "Graduation",
+      "degree": "B.Sc in Computer Science & Engineering",
+      "institute": "Daffodil International University",
+      "timeline": "2018-2022"
     }
   ]
 }

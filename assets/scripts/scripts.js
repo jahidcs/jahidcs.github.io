@@ -37,6 +37,9 @@ const detailsContainer = document.querySelector(".details");
 const categoryList = document.querySelector(".category");
 const toolsContainer = document.querySelector(".tools");
 
+const degreeList = document.querySelector(".degree");
+const degreeContainer = document.querySelector(".degree-details");
+
 fetch("/assets/json/data.json")
   .then((response) => response.json())
   .then((data) => {
@@ -98,7 +101,7 @@ fetch("/assets/json/data.json")
         const categoryDetails = data.skill[categoryIndex];
 
         // Clear the tools container before adding new items
-        toolsContainer.innerHTML = "";
+        toolsContainer.innerHTML = `<h4>${categoryDetails.category}</h4>`;
 
         // Create a list element for each tool
         const toolsList = document.createElement("ul");
@@ -114,13 +117,42 @@ fetch("/assets/json/data.json")
       });
     });
 
+    // Education
+    data.education.forEach((degree, index) => {
+      const listItem = document.createElement("li");
+      listItem.textContent = degree.type;
+      listItem.dataset.degreeIndex = index;
+      degreeList.appendChild(listItem);
+      listItem.addEventListener("click", () => {
+        // Remove the 'selected' class from all list items
+        const selectedItem = document.querySelector(".degree li.selected");
+        if (selectedItem) {
+          selectedItem.classList.remove("selected");
+        }
+
+        // Add the 'selected' class to the clicked list item
+        listItem.classList.add("selected");
+        const degreeIndex = listItem.dataset.degreeIndex;
+        const degreeDetails = data.education[degreeIndex];
+        degreeContainer.innerHTML = `
+          <h4>${degreeDetails.institute}</h4>
+          <h3>${degreeDetails.degree}</h3>
+          <i>${degreeDetails.timeline}</i>
+        `;
+      });
+    });
+
     // Select the first company as default
     const firstCategory = categoryList.querySelector("li");
     firstCategory.click();
 
-    // Select the first company as default
+    // Select the first Skill as default
     const firstCompany = companiesList.querySelector("li");
     firstCompany.click();
+
+    // Select the first degree as default
+    const firstdegree = degreeList.querySelector("li");
+    firstdegree.click();
   })
   .catch((error) => {
     console.error("Error fetching data:", error);
