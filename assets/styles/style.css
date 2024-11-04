@@ -28,10 +28,6 @@ header {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-header.hidden {
-  top: -80px;
-}
-
 nav {
   display: flex;
   justify-content: space-between;
@@ -77,11 +73,12 @@ nav.loaded {
 /* Header Part End */
 
 .content {
-  padding: 0 10rem;
+  padding: 0;
+  background-color: var(--background-color);
 }
 
-.about-container {
-  height: 100vh;
+.about-section {
+  padding: 5rem 10rem 1rem 10rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -128,7 +125,8 @@ nav.loaded {
   border-radius: 50%;
 }
 .experience-section {
-  height: 90vh;
+  padding: 1rem 10rem;
+  background-color: var(--primary-color);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -291,6 +289,10 @@ nav.loaded {
   text-align: justify;
 }
 
+.contact-section {
+  padding: 1rem 10rem;
+}
+
 footer {
   text-align: center;
   padding: 10px;
@@ -299,9 +301,6 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
-  header.hidden {
-    top: -110px;
-  }
   nav {
     display: flex;
     flex-direction: column;
@@ -332,14 +331,26 @@ footer {
   }
 
   .content {
-    padding: 0 3rem;
+    padding: 0;
   }
 
-  .about-container {
+  .about-section {
+    padding: 8rem 3rem 1rem 3rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+  .experience-section {
+    padding: 1rem 3rem;
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .contact-section {
+    padding: 1rem 3rem;
   }
 
   .my-about {
@@ -532,9 +543,6 @@ footer {
 }
 
 @media screen and (max-width: 570px) {
-  header.hidden {
-    top: -110px;
-  }
   nav {
     display: flex;
     flex-direction: column;
@@ -565,14 +573,26 @@ footer {
   }
 
   .content {
-    padding: 0 3rem;
+    padding: 0;
   }
 
-  .about-container {
+  .about-section {
+    padding: 8rem 3rem 1rem 3rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+  .experience-section {
+    padding: 1rem 3rem;
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .contact-section {
+    padding: 1rem 3rem;
   }
 
   .my-about {
@@ -765,9 +785,6 @@ footer {
 }
 
 @media screen and (max-width: 479px) {
-  header.hidden {
-    top: -110px;
-  }
   nav {
     display: flex;
     flex-direction: column;
@@ -799,14 +816,26 @@ footer {
   }
 
   .content {
-    padding: 0 3rem;
+    padding: 0;
   }
 
-  .about-container {
+  .about-section {
+    padding: 8rem 3rem 1rem 3rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+  .experience-section {
+    padding: 1rem 3rem;
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .contact-section {
+    padding: 1rem 3rem;
   }
 
   .my-about {

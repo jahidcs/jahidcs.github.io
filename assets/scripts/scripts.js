@@ -1,19 +1,19 @@
-const header = document.querySelector("header");
-let lastScrollY = 0;
-const threshold = 1;
-header.classList.remove("hidden");
+// const header = document.querySelector("header");
+// let lastScrollY = 0;
+// const threshold = 1;
+// header.classList.remove("hidden");
 
-window.addEventListener("scroll", () => {
-  const currentScrollY = window.scrollY;
+// window.addEventListener("scroll", () => {
+//   const currentScrollY = window.scrollY;
 
-  if (currentScrollY > lastScrollY + threshold) {
-    header.classList.add("hidden");
-  } else if (currentScrollY < lastScrollY - threshold) {
-    header.classList.remove("hidden");
-  }
+//   if (currentScrollY > lastScrollY + threshold) {
+//     header.classList.add("hidden");
+//   } else if (currentScrollY < lastScrollY - threshold) {
+//     header.classList.remove("hidden");
+//   }
 
-  lastScrollY = currentScrollY;
-});
+//   lastScrollY = currentScrollY;
+// });
 
 // Effect on appearing NAV
 const navElement = document.querySelector("nav");
