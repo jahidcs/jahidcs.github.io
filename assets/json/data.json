@@ -3,21 +3,35 @@
   "photo": "",
   "contact": ["jahid.cseq@gmail.com"],
   "profession": "Software Engineer",
-  "bio": "I am a software developer dedicated to turning complicated ideas into practical solutions. I have improved my skills in database design, API development, and system architecture to deliver efficient and scalable systems. By collaborating closely with clients, I aim to understand their unique requirements and provide tailored solutions to enhance business growth.",
+  "bio": "I am a Software Engineer Passionate about Database Design and API development and System Design by working in a collaborative environment with a flexible nature of adopting, learning and implementing new things to fulfill the project demands. Have a strong ambition to work in the larger scale projects by following good practices for making systems efficient.",
   "experience": [
     {
       "organization": "Shpper",
       "position": "Software Engineer",
       "start": "May 2024",
       "end": "Till now",
-      "detail": "Working on Projects"
+      "detail": "&#10146; working on a Backend System with Django and Django Rest Framework for a product according to the requirements.\n &#10146;  Implementing Different features and functionalities with real time updates by Websocket with Django Channels.\n &#10146; Preparing custom script for Data serialization to restore NoSQL Data to Relational DB \n &#10146; Getting familiar with Site reliability with AWS EC2, S3 Bucket, RDS"
+    },
+    {
+      "organization": "eAppair LTD",
+      "position": "Python Developer",
+      "start": "January 2024",
+      "end": "April 2024",
+      "detail": "&#10146; Collaborated on existing ERP system projects by Preparing necessary methods, write SQL queries for preparing report to manage and evaluate sales force activity."
     },
     {
       "organization": "Winning Bees",
       "position": "Junior Software Engineer",
-      "start": "December 2022",
+      "start": "April 2023",
       "end": "December 2023",
-      "detail": "&#10146; Worked on 4 different project that are built with Flutter like content management app, Book app with Google book API for Readers community, PDF reader app with note taking and PDF creation functionality with an experience of deploying and implementing referrel points allocation on sharing\n &#10146; Recently, Collaborating on 2 Backend projects where implemented Custom Admin panel, database design, API building, Cronjob, Securing APIs with APIKey"
+      "detail": "&#10146; Worked on 4 different project that are built with Flutter like content management app, Book app with Google book API for Readers community, PDF reader app with note taking and PDF creation functionality with an experience of app publishing in play store and implementing referral points allocation on sharing\n &#10146; Familiarized with Backend Development by Collaborating on 2 Backend projects where implemented Custom Admin panel with wagtail CMS,database design, API development, Data serialization, Background task setup with Cronjob, Securing APIs with APIKey"
+    },
+    {
+      "organization": "Winning Bees",
+      "position": "Intern Software Engineer",
+      "start": "December 2022",
+      "end": "March 2023",
+      "detail": "&#10146; During Internship period worked on Learning Flutter, Firebase and Riverpod as a State Management tool. \n &#10146; Collaborated in the existing project built by Flutter"
     },
     {
       "organization": "HealthX BD",
@@ -40,10 +54,8 @@
       "category": "Site Reliability",
       "tools": [
         "Cloud - AWS",
-        "CI/CD - Github",
-        "Data Serialization - YAML, JSON",
-        "Docker",
-        "Kubernetics"
+        "CI/CD - Github Actions",
+        "Data Serialization - YAML, JSON"
       ]
     }
   ],
