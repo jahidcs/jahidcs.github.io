@@ -1,7 +1,13 @@
 {
-  "name": "Jahid Hassan Shamim",
-  "photo": "",
-  "contact": ["jahid.cseq@gmail.com"],
+  "name": "JAHID HASSAN SHAMIM",
+  "photo": "assets/image/jahidcs.jpg",
+  "contact": {
+    "email": "jahid.cseq@gmail.com",
+    "phone": "+8801737880254",
+    "linkedin": "linkedin.com/in/jahidcs",
+    "github": "github.com/jahidcs",
+    "portfolio": "jahidcs.github.io"
+  },
   "profession": "Software Engineer",
   "bio": "I am a Software Engineer Passionate about Database Design and API development and System Design by working in a collaborative environment with a flexible nature of adopting, learning and implementing new things to fulfill the project demands. Have a strong ambition to work in the larger scale projects by following good practices for making systems efficient.",
   "experience": [
@@ -86,7 +92,8 @@
       "degree": "B.Sc in Computer Science & Engineering",
       "institute": "Daffodil International University",
       "start": "January 2018",
-      "end": "January 2022"
+      "end": "January 2022",
+      "location": "Dhaka, Bangladesh"
     }
   ]
 }

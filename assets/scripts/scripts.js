@@ -1,20 +1,3 @@
-// const header = document.querySelector("header");
-// let lastScrollY = 0;
-// const threshold = 1;
-// header.classList.remove("hidden");
-
-// window.addEventListener("scroll", () => {
-//   const currentScrollY = window.scrollY;
-
-//   if (currentScrollY > lastScrollY + threshold) {
-//     header.classList.add("hidden");
-//   } else if (currentScrollY < lastScrollY - threshold) {
-//     header.classList.remove("hidden");
-//   }
-
-//   lastScrollY = currentScrollY;
-// });
-
 // Effect on appearing NAV
 const navElement = document.querySelector("nav");
 
@@ -26,19 +9,22 @@ const navLinks = document.querySelectorAll("nav a");
 
 navLinks.forEach((link) => {
   link.addEventListener("click", (e) => {
-    navLinks.forEach((link) => link.classList.remove("active"));
-    link.classList.add("active");
+    const href = link.getAttribute("href");
 
-    e.preventDefault();
-    // Prevent default anchor behavior
+    if (href.startsWith("#")) {
+      e.preventDefault();
 
-    const targetId = link.getAttribute("href");
-    const targetElement = document.querySelector(targetId);
+      navLinks.forEach((link) => link.classList.remove("active"));
+      link.classList.add("active");
 
-    window.scrollTo({
-      top: targetElement.offsetTop,
-      behavior: "smooth",
-    });
+      const targetElement = document.querySelector(href);
+      if (targetElement) {
+        window.scrollTo({
+          top: targetElement.offsetTop,
+          behavior: "smooth",
+        });
+      }
+    }
   });
 });
 
