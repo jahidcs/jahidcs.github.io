@@ -183,6 +183,7 @@ nav.loaded {
 }
 .details .exp-details {
   text-align: justify;
+  list-style: none;
 }
 
 /* SKILLS */
@@ -230,7 +231,7 @@ nav.loaded {
   font-size: 1.2rem;
 }
 
-.tools ul {
+.tools div {
   list-style: none;
 }
 

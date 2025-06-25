@@ -9,36 +9,61 @@
       "organization": "Shpper",
       "position": "Software Engineer",
       "start": "May 2024",
-      "end": "Till now",
-      "detail": "&#10146; working on a Backend System with Django and Django Rest Framework for a product according to the requirements.\n &#10146;  Implementing Different features and functionalities with real time updates by Websocket with Django Channels.\n &#10146; Preparing custom script for Data serialization to restore NoSQL Data to Relational DB \n &#10146; Getting familiar with Site reliability with AWS EC2, S3 Bucket, RDS"
+      "end": "Present",
+      "type": "Full-time",
+      "location": "Dhaka, Bangladesh",
+      "detail": [
+        "Led backend design and development of a cross-border product sourcing platform, delivering core features like buyer-driven requests, traveler listings, and real-time updates in a modular and maintainable architecture.",
+        "Implemented dynamic workflows for cost calculation, location-based trip matching, and automated user onboarding, ensuring data consistency and high performance through optimized models and queries.",
+        "Managed infrastructure migration and scaling; built real-time notification systems; and contributed to platform reliability by overseeing deployment and production operations."
+      ]
     },
     {
       "organization": "eAppair LTD",
       "position": "Python Developer",
       "start": "January 2024",
       "end": "April 2024",
-      "detail": "&#10146; Collaborated on existing ERP system projects by Preparing necessary methods, write SQL queries for preparing report to manage and evaluate sales force activity."
+      "type": "Full-time",
+      "location": "Dhaka, Bangladesh",
+      "detail": [
+        "Collaborated on existing ERP system projects by preparing backend methods and writing SQL queries to generate reports for monitoring and evaluating sales force activities."
+      ]
     },
     {
       "organization": "Winning Bees",
       "position": "Junior Software Engineer",
       "start": "April 2023",
       "end": "December 2023",
-      "detail": "&#10146; Worked on 4 different project that are built with Flutter like content management app, Book app with Google book API for Readers community, PDF reader app with note taking and PDF creation functionality with an experience of app publishing in play store and implementing referral points allocation on sharing\n &#10146; Familiarized with Backend Development by Collaborating on 2 Backend projects where implemented Custom Admin panel with wagtail CMS,database design, API development, Data serialization, Background task setup with Cronjob, Securing APIs with APIKey"
+      "type": "Full-time",
+      "location": "Remote",
+      "detail": [
+        "Contributed to 4 mobile projects including a content management app, a book app integrating Google Books API, a PDF reader with note-taking and PDF generation, and a referral system linked to app sharing.",
+        "Gained backend development experience by contributing to 2 backend projects, building custom admin dashboards with CMS integration, designing databases, developing APIs, implementing background jobs, and securing endpoints with API keys."
+      ]
     },
     {
       "organization": "Winning Bees",
       "position": "Intern Software Engineer",
       "start": "December 2022",
       "end": "March 2023",
-      "detail": "&#10146; During Internship period worked on Learning Flutter, Firebase and Riverpod as a State Management tool. \n &#10146; Collaborated in the existing project built by Flutter"
+      "type": "Internship",
+      "location": "Remote",
+      "detail": [
+        "Built a solid foundation in cross-platform app development by learning Flutter, Firebase, and Riverpod as part of the internship program.",
+        "Actively contributed to an existing production-grade Flutter project, assisting in feature development and enhancing user interface components."
+      ]
     },
     {
       "organization": "HealthX BD",
       "position": "Intern Software Engineer",
       "start": "April 2022",
       "end": "August 2022",
-      "detail": "&#10146; Worked on Doctor and Patient portal (Personal Profiling for doctor and patient) for managing appointments and Chambers.\n&#10146; Designing the user Interface and Integrated all APIs based on requirements."
+      "type": "Internship",
+      "location": "Dhaka, Bangladesh",
+      "detail": [
+        "Worked on a Doctor and Patient portal to support appointment scheduling and chamber management with individual profiling features.",
+        "Designed user interfaces and integrated APIs as per functional requirements."
+      ]
     }
   ],
   "skill": [
@@ -48,15 +73,11 @@
     },
     {
       "category": "Database",
-      "tools": ["MySQL", "PostgreSQL"]
+      "tools": ["PostgreSQL", "MySQL"]
     },
     {
-      "category": "Site Reliability",
-      "tools": [
-        "Cloud - AWS",
-        "CI/CD - Github Actions",
-        "Data Serialization - YAML, JSON"
-      ]
+      "category": "DevOps & Cloud",
+      "tools": ["AWS (EC2, RDS, S3)", "Github Actions"]
     }
   ],
   "education": [
@@ -64,7 +85,8 @@
       "type": "Graduation",
       "degree": "B.Sc in Computer Science & Engineering",
       "institute": "Daffodil International University",
-      "timeline": "2018-2022"
+      "start": "January 2018",
+      "end": "January 2022"
     }
   ]
 }

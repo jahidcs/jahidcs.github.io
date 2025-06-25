@@ -90,6 +90,7 @@ fetch("/assets/json/data.json")
       listItem.addEventListener("click", () => {
         // Remove the 'selected' class from all list items
         const selectedItem = document.querySelector(".companies li.selected");
+
         if (selectedItem) {
           selectedItem.classList.remove("selected");
         }
@@ -100,13 +101,16 @@ fetch("/assets/json/data.json")
         const companyIndex = listItem.dataset.companyIndex;
         const companyDetails = data.experience[companyIndex];
 
-        const formattedDetail = companyDetails.detail.replace(/\n/g, "<br>");
+        const detailList = companyDetails.detail
+          .map((item) => `<li>- ${item}</li>`)
+          .join("");
+
         detailsContainer.innerHTML = `
-            <h3>${companyDetails.organization}</h3>
-            <h4>${companyDetails.position}</h4>
-            <p class='period'>${companyDetails.start} - ${companyDetails.end}</p>
-            <p class='exp-details'>${formattedDetail}</p>
-          `;
+          <h3>${companyDetails.organization}</h3>
+          <h4>${companyDetails.position}</h4>
+          <p class='period'>${companyDetails.start} - ${companyDetails.end}</p>
+          <div class='exp-details'>${detailList}</div>
+        `;
       });
     });
 
@@ -135,14 +139,12 @@ fetch("/assets/json/data.json")
         toolsContainer.innerHTML = `<h4>${categoryDetails.category}</h4>`;
 
         // Create a list element for each tool
-        const toolsList = document.createElement("ul");
+        const toolsList = document.createElement("div");
         categoryDetails.tools.forEach((tool) => {
           const toolItem = document.createElement("li");
-          // toolItem.textContent = tool;
-          toolItem.innerHTML = `&#10146; ${tool}`;
+          toolItem.innerHTML = `- ${tool}`;
           toolsList.appendChild(toolItem);
         });
-
         // Add the list of tools to the tools container
         toolsContainer.appendChild(toolsList);
       });
@@ -168,7 +170,7 @@ fetch("/assets/json/data.json")
         degreeContainer.innerHTML = `
           <h4>${degreeDetails.institute}</h4>
           <h3>${degreeDetails.degree}</h3>
-          <i>${degreeDetails.timeline}</i>
+          <i>${degreeDetails.start} - ${degreeDetails.end}</i>
         `;
       });
     });
