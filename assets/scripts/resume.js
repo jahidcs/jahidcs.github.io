@@ -27,7 +27,7 @@ fetch("assets/json/data.json")
     const summary = `
       <div class="section">
         <h3>Summary</h3>
-        <p>${data.bio}</p>
+        <p>${data.resume_bio}</p>
       </div>
     `;
 
@@ -80,7 +80,7 @@ fetch("assets/json/data.json")
       </div>
     `;
 
-    container.innerHTML = header + summary + experience + education + skills;
+    container.innerHTML = header + summary + skills + experience + education;
   });
 
 // ===== Generate PDF ===== //
@@ -140,7 +140,10 @@ document
         { text: contactList, style: "contact" },
 
         section("Summary"),
-        { text: data.bio, style: "paragraph" },
+        { text: data.resume_bio, style: "paragraph" },
+
+        section("Skills"),
+        { text: uniqueSkills.join(", "), style: "paragraph" },
 
         section("Experience"),
         ...data.experience.slice(0, 3).flatMap((exp) => [
@@ -182,9 +185,6 @@ document
             ],
           },
         ]),
-
-        section("Skills"),
-        { text: uniqueSkills.join(", "), style: "paragraph" },
       ],
       styles: {
         header: {

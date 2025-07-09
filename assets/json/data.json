@@ -10,6 +10,25 @@
   },
   "profession": "Software Engineer",
   "bio": "I am a Software Engineer Passionate about Database Design and API development and System Design by working in a collaborative environment with a flexible nature of adopting, learning and implementing new things to fulfill the project demands. Have a strong ambition to work in the larger scale projects by following good practices for making systems efficient.",
+  "resume_bio": "I am a backend-focused software engineer who enjoys building clean, scalable systems. I prioritize writing efficient code, designing clean, reliable APIs, and ensuring everything works well in production.",
+  "skill": [
+    {
+      "category": "Language",
+      "tools": ["Python", "JavaScript", "Dart"]
+    },
+    {
+      "category": "Framework",
+      "tools": ["Django", "FastAPI", "Flutter"]
+    },
+    {
+      "category": "Database",
+      "tools": ["PostgreSQL"]
+    },
+    {
+      "category": "Cloud",
+      "tools": ["AWS (EC2, RDS, S3)", "Github Actions"]
+    }
+  ],
   "experience": [
     {
       "organization": "Shpper",
@@ -70,20 +89,6 @@
         "Worked on a Doctor and Patient portal to support appointment scheduling and chamber management with individual profiling features.",
         "Designed user interfaces and integrated APIs as per functional requirements."
       ]
-    }
-  ],
-  "skill": [
-    {
-      "category": "Programming",
-      "tools": ["Python", "JavaScript", "Dart"]
-    },
-    {
-      "category": "Database",
-      "tools": ["PostgreSQL", "MySQL"]
-    },
-    {
-      "category": "DevOps & Cloud",
-      "tools": ["AWS (EC2, RDS, S3)", "Github Actions"]
     }
   ],
   "education": [
