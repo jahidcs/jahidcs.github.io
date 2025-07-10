@@ -145,19 +145,13 @@
               Have a question, an idea, or something you'd like to collaborate
               on? Feel free to reach out — I’d love to hear from you.
             </p>
-            <form
-              class="contact-form"
-              id="contact-form"
-              action="mailto:jahid.cseq@gmail.com"
-              method="POST"
-              enctype="text/plain"
-            >
+            <form class="contact-form" id="contact-form">
               <div class="form-group">
                 <label for="name">Name</label>
                 <input
                   type="text"
                   id="name"
-                  name="Name"
+                  name="name"
                   placeholder="Your Name"
                   required
                 />
@@ -167,7 +161,7 @@
                 <input
                   type="email"
                   id="email"
-                  name="Email"
+                  name="email"
                   placeholder="you@example.com"
                   required
                 />
@@ -176,7 +170,7 @@
                 <label for="message">Message</label>
                 <textarea
                   id="message"
-                  name="Message"
+                  name="message"
                   rows="5"
                   placeholder="What would you like to discuss?"
                   required
@@ -184,6 +178,7 @@
               </div>
               <button type="submit" class="submit-btn">Send Message</button>
             </form>
+            <div id="form-status"></div>
           </div>
         </section>
       </div>
