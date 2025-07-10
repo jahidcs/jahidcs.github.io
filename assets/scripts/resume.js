@@ -1,5 +1,5 @@
 // ===== Render resume to the screen ===== //
-fetch("assets/json/data.json")
+fetch("../assets/json/data.json")
   .then((res) => res.json())
   .then((data) => {
     const container = document.getElementById("resume-content");
