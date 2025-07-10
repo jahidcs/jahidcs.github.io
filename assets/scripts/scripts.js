@@ -1,11 +1,5 @@
-// Effect on appearing NAV
-const navElement = document.querySelector("nav");
-
-setTimeout(() => {
-  navElement.classList.add("loaded");
-}, 100);
-
-const navLinks = document.querySelectorAll("nav a");
+// Highlight nav link based on click
+const navLinks = document.querySelectorAll(".site-nav a");
 
 navLinks.forEach((link) => {
   link.addEventListener("click", (e) => {
@@ -14,13 +8,13 @@ navLinks.forEach((link) => {
     if (href.startsWith("#")) {
       e.preventDefault();
 
-      navLinks.forEach((link) => link.classList.remove("active"));
+      navLinks.forEach((l) => l.classList.remove("active"));
       link.classList.add("active");
 
-      const targetElement = document.querySelector(href);
-      if (targetElement) {
+      const target = document.querySelector(href);
+      if (target) {
         window.scrollTo({
-          top: targetElement.offsetTop,
+          top: target.offsetTop - 80, // offset for fixed header
           behavior: "smooth",
         });
       }
@@ -28,24 +22,35 @@ navLinks.forEach((link) => {
   });
 });
 
-window.addEventListener("load", () => {
+// On load, highlight #about
+window.addEventListener("DOMContentLoaded", () => {
   const hash = window.location.hash;
-  if (hash) {
-    const targetElement = document.querySelector(hash);
-    if (targetElement) {
-      // Scroll to the target element
-      window.scrollTo({
-        top: targetElement.offsetTop,
-        behavior: "smooth",
-      });
+  const defaultLink = document.querySelector(
+    `.site-nav a[href="${hash || "#about"}"]`
+  );
 
-      // Highlight the corresponding navigation link
-      const targetLink = document.querySelector(`nav a[href="${hash}"]`);
-      if (targetLink) {
-        targetLink.classList.add("active");
-      }
-    }
+  if (defaultLink) {
+    defaultLink.classList.add("active");
   }
+});
+
+// Scroll behaviour
+
+let lastScroll = 0;
+const header = document.querySelector(".site-header");
+
+window.addEventListener("scroll", () => {
+  const currentScroll = window.pageYOffset;
+
+  if (currentScroll > lastScroll && currentScroll > 50) {
+    // Scrolling down
+    header.classList.add("hide");
+  } else {
+    // Scrolling up
+    header.classList.remove("hide");
+  }
+
+  lastScroll = currentScroll;
 });
 
 const companiesList = document.querySelector(".companies");
@@ -64,13 +69,13 @@ fetch("/assets/json/data.json")
     document.getElementById("name").textContent = data.name;
     document.getElementById("profession").textContent = data.profession;
     document.getElementById("bio").textContent = data.bio;
-    document.getElementById("contact-email").textContent =
-      data.contact["email"];
+    // document.getElementById("contact-email").textContent =
+    //   data.contact["email"];
 
     // EXPERIENCE
     data.experience.forEach((company, index) => {
       const listItem = document.createElement("li");
-      listItem.textContent = company.organization;
+      listItem.textContent = company.org_short;
       listItem.dataset.companyIndex = index;
       companiesList.appendChild(listItem);
 
