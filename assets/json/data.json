@@ -31,7 +31,8 @@
   ],
   "experience": [
     {
-      "organization": "Shpper",
+      "organization": "Shpper Software Design FZCO",
+      "org_short": "Shpper",
       "position": "Software Engineer",
       "start": "May 2024",
       "end": "Present",
@@ -45,6 +46,7 @@
     },
     {
       "organization": "eAppair LTD",
+      "org_short": "eAppair",
       "position": "Python Developer",
       "start": "January 2024",
       "end": "April 2024",
@@ -55,7 +57,8 @@
       ]
     },
     {
-      "organization": "Winning Bees",
+      "organization": "Winning Bees LLC",
+      "org_short": "Winning Bees",
       "position": "Junior Software Engineer",
       "start": "April 2023",
       "end": "December 2023",
@@ -67,7 +70,8 @@
       ]
     },
     {
-      "organization": "Winning Bees",
+      "organization": "Winning Bees LLC",
+      "org_short": "Winning Bees",
       "position": "Intern Software Engineer",
       "start": "December 2022",
       "end": "March 2023",
@@ -80,6 +84,7 @@
     },
     {
       "organization": "HealthX BD",
+      "org_short": "HealthX",
       "position": "Intern Software Engineer",
       "start": "April 2022",
       "end": "August 2022",
