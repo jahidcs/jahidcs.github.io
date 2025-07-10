@@ -268,20 +268,25 @@
     <script>
       const form = document.getElementById("contact-form");
       const responseEl = document.getElementById("form-response");
+
       form.addEventListener("submit", (e) => {
         e.preventDefault();
         const formData = new FormData(form);
+
         fetch(
-          "https://script.google.com/macros/s/AKfycbz3zKgEZNo31bqxoZkVk4DfGAc75VwadAdtQ4XDVCOG48gOBVBfzcSS2BxT7ZT_wcHR/exec",
-          { method: "POST", body: formData }
+          "https://script.google.com/macros/s/AKfycbxd1oPHASdd6i1gxEFABYAe9IHzL3AiPn1ZUdhDyhio1fYOiwKv2lrNXkCH1Nm9fITk/exec",
+          {
+            method: "POST",
+            body: formData,
+          }
         )
-          .then((res) => res.text())
+          .then((res) => res.json())
           .then((data) => {
             responseEl.textContent = "Message sent successfully!";
             form.reset();
           })
           .catch((err) => {
-            responseEl.textContent = "Failed to send message. Try again.";
+            responseEl.textContent = "Failed to send message.";
             console.error("Error:", err);
           });
       });
