@@ -145,7 +145,7 @@
               Have a question, an idea, or something you'd like to collaborate
               on? Feel free to reach out — I’d love to hear from you.
             </p>
-            <form class="contact-form" id="contact-form">
+            <form id="contact-form" class="contact-form">
               <div class="form-group">
                 <label for="name">Name</label>
                 <input
@@ -177,8 +177,11 @@
                 ></textarea>
               </div>
               <button type="submit" class="submit-btn">Send Message</button>
+              <p
+                id="form-response"
+                style="margin-top: 1rem; font-weight: bold"
+              ></p>
             </form>
-            <div id="form-status"></div>
           </div>
         </section>
       </div>
@@ -263,27 +266,25 @@
 
     <script src="assets/scripts/scripts.js"></script>
     <script>
-      fetch(
-        "https://script.google.com/macros/s/AKfycbyfyyinX4nBXon9F9R-YZrNrcOK4Tr2NFuFTG8Vs5TspzvY_axp_Wz-OSkUykkCtvI/exec",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            name: "John Doe",
-            email: "john@example.com",
-            message: "Hello there",
-          }),
-        }
-      )
-        .then((res) => res.json())
-        .then((data) => {
-          console.log(data);
-        })
-        .catch((err) => {
-          console.error("Error:", err);
-        });
+      const form = document.getElementById("contact-form");
+      const responseEl = document.getElementById("form-response");
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const formData = new FormData(form);
+        fetch(
+          "https://script.google.com/macros/s/AKfycbz3zKgEZNo31bqxoZkVk4DfGAc75VwadAdtQ4XDVCOG48gOBVBfzcSS2BxT7ZT_wcHR/exec",
+          { method: "POST", body: formData }
+        )
+          .then((res) => res.text())
+          .then((data) => {
+            responseEl.textContent = "Message sent successfully!";
+            form.reset();
+          })
+          .catch((err) => {
+            responseEl.textContent = "Failed to send message. Try again.";
+            console.error("Error:", err);
+          });
+      });
     </script>
   </body>
 </html>
