@@ -141,47 +141,21 @@
         <section id="contact">
           <div class="contact-section">
             <h2>Contact</h2>
-            <p>
-              Have a question, an idea, or something you'd like to collaborate
-              on? Feel free to reach out — I’d love to hear from you.
-            </p>
-            <form id="contact-form" class="contact-form">
-              <div class="form-group">
-                <label for="name">Name</label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  placeholder="Your Name"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <label for="email">Email</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="you@example.com"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <label for="message">Message</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows="5"
-                  placeholder="What would you like to discuss?"
-                  required
-                ></textarea>
-              </div>
-              <button type="submit" class="submit-btn">Send Message</button>
-              <p
-                id="form-response"
-                style="margin-top: 1rem; font-weight: bold"
-              ></p>
-            </form>
+            <p>Have a question, an idea, or something you'd like to collaborate
+              on? Feel free to reach out — I’d love to hear from you.</p>
+            <ul>
+              <li>
+                Email - 
+                <a href="mailto:jahid.cseq@gmail.com">jahid.cseq@gmail.com</a>
+              </li>
+              <li>
+                LinkedIn - 
+                <a href="https://linkedin.com/in/jahidcs" target="_blank"
+                  >linkedin.com/in/jahidcs</a
+                >
+              </li>
+              </li>
+            </ul>
           </div>
         </section>
       </div>
@@ -265,29 +239,5 @@
     </footer>
 
     <script src="assets/scripts/scripts.js"></script>
-    <script>
-      document
-        .getElementById("contact-form")
-        .addEventListener("submit", function (e) {
-          e.preventDefault();
-          const form = e.target;
-          const formData = new FormData(form);
-          fetch(
-            "https://script.google.com/macros/s/AKfycbyyoZCsnCUrRPow-GUh2s0JO21ADiAV7yOxhUwwNGy94JN-MWUT3QsaFE1Dl0uF2WOx/exec",
-            { method: "POST", body: formData }
-          )
-            .then((res) => res.text())
-            .then((data) => {
-              document.getElementById("form-response").textContent =
-                "Message sent!";
-              form.reset();
-            })
-            .catch((err) => {
-              console.error(err);
-              document.getElementById("form-response").textContent =
-                "Error. Try again.";
-            });
-        });
-    </script>
   </body>
 </html>

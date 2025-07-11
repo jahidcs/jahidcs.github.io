@@ -26,7 +26,7 @@
     },
     {
       "category": "Cloud",
-      "tools": ["AWS (EC2, RDS, S3)", "Github Actions"]
+      "tools": ["AWS (EC2, RDS, S3)", "Github Actions", "Linux bases OS"]
     }
   ],
   "experience": [
