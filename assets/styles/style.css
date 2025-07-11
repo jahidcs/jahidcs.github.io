@@ -153,25 +153,33 @@ body {
   flex-direction: column;
   justify-content: center;
 }
-.experience-container {
+
+.experience-container,
+.skill-container,
+.ed-container {
   display: flex;
   justify-content: space-between;
 }
 
-.companies ul {
-  list-style: none;
+.companies ul,
+.degree ul,
+.category ul {
   padding: 10px;
   margin: 0;
 }
 
-.companies li {
+.companies li,
+.degree li,
+.category li {
   list-style: none;
   font-size: 1rem;
   cursor: pointer;
   padding: 10px 20px;
   border-left: 1px solid var(--texture-color);
 }
-.companies li:hover {
+.companies li:hover,
+.category li:hover,
+.degree li:hover {
   cursor: pointer;
   background: var(--gray-bg);
   color: var(--accent-color);
@@ -179,7 +187,9 @@ body {
   transition: 1s;
 }
 
-.companies li.selected {
+.companies li.selected,
+.category li.selected,
+.degree li.selected {
   cursor: pointer;
   background: var(--gray-bg);
   color: var(--accent-color);
@@ -187,7 +197,9 @@ body {
   border-left: 1px solid var(--accent-color);
 }
 
-.details {
+.details,
+.tools,
+.degree-details {
   width: 80%;
 }
 
@@ -214,94 +226,21 @@ body {
 }
 
 /* SKILLS */
-.skill-container {
-  display: flex;
-  justify-content: space-between;
-}
-
-.category ul {
-  list-style: none;
-  padding: 10px;
-  margin: 0;
-}
-
-.category li {
-  font-size: 1rem;
-  list-style: none;
-  cursor: pointer;
-  padding: 10px 20px;
-  border-left: 1px solid var(--texture-color);
-}
-.category li:hover {
-  cursor: pointer;
-  background: var(--gray-bg);
-  color: var(--accent-color);
-  font-weight: 500;
-  transition: 1s;
-}
-
-.category li.selected {
-  cursor: pointer;
-  background: var(--gray-bg);
-  color: var(--accent-color);
-  font-weight: 500;
-  border-left: 1px solid var(--accent-color);
-}
-
-.tools {
-  width: 80%;
-}
 
 .tools h4 {
   margin: 0;
   font-weight: 500;
   font-size: 1.2rem;
-  line-height: 3;
 }
 
 .tools div {
+  margin-top: 1rem;
   font-size: 1rem;
   list-style: none;
   line-height: 1.5;
 }
 
 /* DEGREE */
-.ed-container {
-  display: flex;
-  justify-content: space-between;
-}
-
-.degree ul {
-  list-style: none;
-  padding: 10px;
-  margin: 0;
-}
-
-.degree li {
-  list-style: none;
-  cursor: pointer;
-  padding: 10px 20px;
-  border-left: 1px solid var(--texture-color);
-}
-.degree li:hover {
-  cursor: pointer;
-  background: var(--gray-bg);
-  color: var(--accent-color);
-  font-weight: 500;
-  transition: 1s;
-}
-
-.degree li.selected {
-  cursor: pointer;
-  background: var(--gray-bg);
-  color: var(--accent-color);
-  font-weight: 500;
-  border-left: 1px solid var(--accent-color);
-}
-
-.degree-details {
-  width: 80%;
-}
 
 .degree-details h4 {
   margin: 0;
@@ -319,6 +258,7 @@ body {
   text-align: justify;
 }
 
+/* CONTACT */
 .contact-section {
   padding: 1rem 0rem;
 }
@@ -359,7 +299,7 @@ body {
   flex-direction: column;
   justify-content: center;
   text-align: left;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .footer-branding h3 {
@@ -411,729 +351,238 @@ body {
 }
 /* === FOOTER === */
 
-@media screen and (max-width: 768px) {
-  nav {
-    display: flex;
+/* === Responsive Styles === */
+@media screen and (max-width: 1020px) {
+  .header-container,
+  .footer-grid,
+  .content-container {
+    padding: 0 2rem;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
   }
 
-  nav .options {
-    padding: 10px;
+  .site-header {
+    text-align: center;
   }
 
-  nav .branding {
-    margin-left: 0;
+  .header-container {
+    flex-direction: column;
+    align-items: center;
   }
 
-  nav ol {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  .logo {
+    margin-bottom: 0.5rem;
   }
 
-  nav a {
-    text-decoration: none;
-    color: var(--text-color);
-    font-weight: bold;
-    margin: 1.25rem;
-  }
-
-  .content {
-    padding: 0;
+  .site-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
   }
 
   .about-section {
-    padding: 8rem 3rem 1rem 3rem;
-    display: flex;
+    padding: 5.5rem 0rem 0rem 0rem;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-  }
-  .experience-section {
-    padding: 1rem 3rem;
-    background-color: var(--text);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .contact-section {
-    padding: 1rem 3rem;
+    gap: 1.5rem;
+    text-align: center;
   }
 
   .my-about {
     width: 100%;
   }
 
-  .my-about #name {
-    font-size: 30px;
-  }
-  .my-about #profession {
-    font-size: 20px;
-    margin-top: -15px;
-  }
-  .my-about #bio {
-    margin-top: -15px;
-    margin: 10px 0 25px;
-    color: var(--text-color);
-    text-align: justify;
-  }
-
-  .my-about .social .sci a {
-    text-decoration: none;
-    display: inline-flex;
-    font-size: 15px;
-    padding: 4px;
-    border: 1px solid var(--text-color);
-    border-radius: 50%;
-    color: var(--text-light);
-  }
   .my-img {
-    height: 25vh;
-    width: 25vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    border: 1px solid var(--accent-color);
+    height: 22vh;
+    width: 22vh;
   }
   .my-img img {
-    height: 24vh;
-    width: 24vh;
-    border-radius: 50%;
+    height: 21.5vh;
+    width: 21.5vh;
   }
 
-  .companies li {
-    list-style: none;
-    font-size: small;
-    cursor: pointer;
-    padding: 5px 10px;
-    border-left: 0.5px solid #ddd;
-  }
-
-  .companies li.selected {
-    cursor: pointer;
-    background: var(--gray-bg);
-    color: var(--accent-color);
-    font-weight: bold;
-    border-left: 1px solid var(--accent-color);
-  }
-
-  .details {
-    width: 80%;
-    padding-left: 10px;
-  }
-
-  .details h3 {
-    margin: 0;
-    font-weight: bold;
-    font-size: 0.9rem;
-  }
-  .details h4 {
-    /* margin: 0; */
-    font-weight: bold;
-    font-size: 0.7rem;
-  }
-  .details .period {
-    font-size: 0.6rem;
-  }
-  .details .exp-details {
-    text-align: justify;
-    font-size: 0.7rem;
-  }
-
-  /* SKILLS */
-  .skill-container {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .category ul {
-    list-style: none;
-    padding: 10px;
-    margin: 0;
-  }
-
-  .category li {
-    font-size: small;
-    list-style: none;
-    cursor: pointer;
-    padding: 10px 20px;
-    border-left: 1px solid var(--texture-color);
-  }
-  .category li:hover {
-    cursor: pointer;
-    background: var(--gray-bg);
-    color: var(--accent-color);
-    font-weight: bold;
-    transition: 1s;
-  }
-
-  .category li.selected {
-    cursor: pointer;
-    background: var(--gray-bg);
-    color: var(--accent-color);
-    font-weight: bold;
-    border-left: 1px solid var(--accent-color);
-  }
-
-  .tools {
-    width: 80%;
-    padding-left: 20px;
-  }
-
-  .tools h4 {
-    margin: 0;
-    font-weight: bold;
-    font-size: 0.7rem;
-  }
-
-  .tools ul {
-    list-style: none;
-    font-size: 0.7rem;
-  }
-
-  /* DEGREE */
+  .experience-container,
+  .skill-container,
   .ed-container {
     display: flex;
     justify-content: space-between;
   }
 
-  .degree ul {
-    list-style: none;
-    padding: 10px;
-    margin: 0;
+  .companies,
+  .category,
+  .degree {
+    margin-right: 1rem;
+    width: 30%;
   }
 
-  .degree li {
-    font-size: small;
-    list-style: none;
-    cursor: pointer;
-    padding: 10px 20px;
-    border-left: 1px solid var(--texture-color);
-  }
-  .degree li:hover {
-    cursor: pointer;
-    background: var(--gray-bg);
-    color: var(--accent-color);
-    font-weight: bold;
-    transition: 1s;
-  }
-
-  .degree li.selected {
-    cursor: pointer;
-    background: var(--gray-bg);
-    color: var(--accent-color);
-    font-weight: bold;
-    border-left: 1px solid var(--accent-color);
-  }
-
+  .details,
+  .tools,
   .degree-details {
-    width: 80%;
-    padding-left: 20px;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header-container,
+  .footer-grid,
+  .content-container {
+    padding: 0 2rem;
+    flex-direction: column;
+    align-items: center;
   }
 
-  .degree-details h4 {
-    margin: 0;
-    font-weight: bold;
-    font-size: 0.7rem;
+  .site-header {
+    text-align: center;
   }
-  .degree-details h3 {
-    font-weight: bold;
-    font-size: 0.6rem;
+
+  .header-container {
+    flex-direction: column;
+    align-items: center;
   }
-  .degree-details i {
-    font-size: 0.6rem;
+
+  .logo {
+    margin-bottom: 0.5rem;
   }
-  .degree-details .exp-details {
-    text-align: justify;
+
+  .site-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .about-section {
+    padding: 5.5rem 0rem 0rem 0rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  .my-about {
+    width: 100%;
+  }
+
+  .my-img {
+    height: 22vh;
+    width: 22vh;
+  }
+  .my-img img {
+    height: 21.5vh;
+    width: 21.5vh;
+  }
+
+  .experience-container,
+  .skill-container,
+  .ed-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .companies,
+  .category,
+  .degree {
+    margin-right: 1rem;
+    width: 30%;
+  }
+
+  .details,
+  .tools,
+  .degree-details {
+    width: 100%;
+  }
+
+  .footer-grid {
+    padding: 0 2rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-column {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .footer-branding {
+    align-items: flex-start;
+    margin-bottom: 1rem;
   }
 }
 
 @media screen and (max-width: 570px) {
-  nav {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  .logo {
+    font-size: 1.1rem;
   }
 
-  nav .options {
-    padding: 10px;
+  .site-nav a {
+    font-size: 0.9rem;
   }
-
-  nav .branding {
-    margin-left: 0;
-  }
-
-  nav ol {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  nav a {
-    text-decoration: none;
-    color: var(--text-color);
-    font-weight: bold;
-    margin: 0.65rem;
-  }
-
-  .content {
-    padding: 0;
-  }
-
   .about-section {
-    padding: 8rem 3rem 1rem 3rem;
+    padding: 5rem 0rem 0rem 0rem;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
   }
-  .experience-section {
-    padding: 1rem 3rem;
-    background-color: var(--text);
-    display: flex;
+  .footer-grid {
+    padding: 0 1.5rem;
     flex-direction: column;
-    justify-content: center;
+    align-items: flex-start;
   }
 
-  .contact-section {
-    padding: 1rem 3rem;
-  }
-
-  .my-about {
+  .footer-column {
     width: 100%;
   }
 
-  .my-about #name {
-    font-size: 30px;
-  }
-  .my-about #profession {
-    font-size: 20px;
-    margin-top: -15px;
-  }
-  .my-about #bio {
-    margin-top: -15px;
-    margin: 10px 0 25px;
-    color: var(--text-color);
-    text-align: justify;
-  }
-
-  .my-about .social .sci a {
-    text-decoration: none;
-    display: inline-flex;
-    font-size: 15px;
-    padding: 4px;
-    border: 1px solid var(--text-color);
-    border-radius: 50%;
-    color: var(--text-light);
-  }
-  .my-img {
-    height: 25vh;
-    width: 25vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    border: 1px solid var(--accent-color);
-  }
-  .my-img img {
-    height: 24vh;
-    width: 24vh;
-    border-radius: 50%;
-  }
-
-  .companies li {
-    list-style: none;
-    font-size: small;
-    cursor: pointer;
-    padding: 5px 10px;
-    border-left: 0.5px solid #ddd;
-  }
-
-  .companies li.selected {
-    cursor: pointer;
-    background: var(--gray-bg);
-    color: var(--accent-color);
-    font-weight: bold;
-    border-left: 1px solid var(--accent-color);
-  }
-
-  .details {
-    width: 80%;
-    padding-left: 10px;
-  }
-
-  .details h3 {
-    margin: 0;
-    font-weight: bold;
-    font-size: 0.9rem;
-  }
-  .details h4 {
-    /* margin: 0; */
-    font-weight: bold;
-    font-size: 0.7rem;
-  }
-  .details .period {
-    font-size: 0.6rem;
-  }
-  .details .exp-details {
-    text-align: justify;
-    font-size: 0.7rem;
-  }
-
-  /* SKILLS */
-  .skill-container {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .category ul {
-    list-style: none;
-    padding: 10px;
-    margin: 0;
-  }
-
-  .category li {
-    font-size: small;
-    list-style: none;
-    cursor: pointer;
-    padding: 10px 20px;
-    border-left: 1px solid var(--texture-color);
-  }
-  .category li:hover {
-    cursor: pointer;
-    background: var(--gray-bg);
-    color: var(--accent-color);
-    font-weight: bold;
-    transition: 1s;
-  }
-
-  .category li.selected {
-    cursor: pointer;
-    background: var(--gray-bg);
-    color: var(--accent-color);
-    font-weight: bold;
-    border-left: 1px solid var(--accent-color);
-  }
-
-  .tools {
-    width: 80%;
-    padding-left: 20px;
-  }
-
-  .tools h4 {
-    margin: 0;
-    font-weight: bold;
-    font-size: 0.7rem;
-  }
-
-  .tools ul {
-    list-style: none;
-    font-size: 0.7rem;
-  }
-
-  /* DEGREE */
-  .ed-container {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .degree ul {
-    list-style: none;
-    padding: 10px;
-    margin: 0;
-  }
-
-  .degree li {
-    font-size: small;
-    list-style: none;
-    cursor: pointer;
-    padding: 10px 20px;
-    border-left: 1px solid var(--texture-color);
-  }
-  .degree li:hover {
-    cursor: pointer;
-    background: var(--gray-bg);
-    color: var(--accent-color);
-    font-weight: bold;
-    transition: 1s;
-  }
-
-  .degree li.selected {
-    cursor: pointer;
-    background: var(--gray-bg);
-    color: var(--accent-color);
-    font-weight: bold;
-    border-left: 1px solid var(--accent-color);
-  }
-
-  .degree-details {
-    width: 80%;
-    padding-left: 20px;
-  }
-
-  .degree-details h4 {
-    margin: 0;
-    font-weight: bold;
-    font-size: 0.7rem;
-  }
-  .degree-details h3 {
-    font-weight: bold;
-    font-size: 0.6rem;
-  }
-  .degree-details i {
-    font-size: 0.6rem;
-  }
-  .degree-details .exp-details {
-    text-align: justify;
+  .footer-branding {
+    align-items: flex-start;
   }
 }
 
 @media screen and (max-width: 479px) {
-  nav {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: small;
-  }
-
-  nav .options {
-    padding: 0.4rem;
-  }
-
-  nav .branding {
-    margin-left: 0;
-  }
-
-  nav ol {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  nav a {
-    text-decoration: none;
-    color: var(--text-color);
-    font-weight: bold;
-    margin: 0.55rem;
-  }
-
-  .content {
-    padding: 0;
+  .header-container {
+    padding: 0 1rem;
   }
 
   .about-section {
-    padding: 8rem 3rem 1rem 3rem;
+    padding: 5rem 0rem 0rem 0rem;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
-  }
-  .experience-section {
-    padding: 1rem 3rem;
-    background-color: var(--text);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
   }
 
-  .contact-section {
-    padding: 1rem 3rem;
-  }
-
-  .my-about {
-    width: 100%;
+  .logo {
+    font-size: 1rem;
   }
 
   .my-about #name {
-    font-size: 30px;
+    font-size: 1.6rem;
   }
+
   .my-about #profession {
-    font-size: 20px;
-    margin-top: -15px;
+    font-size: 1.2rem;
   }
+
   .my-about #bio {
-    margin-top: -15px;
-    margin: 10px 0 25px;
-    color: var(--text-color);
-    text-align: justify;
+    font-size: 0.95rem;
+    text-align: center;
   }
 
-  .my-about .social .sci a {
-    text-decoration: none;
-    display: inline-flex;
-    font-size: 15px;
-    padding: 4px;
-    border: 1px solid var(--text-color);
-    border-radius: 50%;
-    color: var(--text-light);
-  }
-  .my-img {
-    height: 25vh;
-    width: 25vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    border: 1px solid var(--accent-color);
-  }
-  .my-img img {
-    height: 24vh;
-    width: 24vh;
-    border-radius: 50%;
+  .site-nav a {
+    font-size: 0.85rem;
   }
 
-  .companies li {
-    list-style: none;
-    font-size: small;
-    cursor: pointer;
-    padding: 5px 10px;
-    border-left: 0.5px solid #ddd;
-  }
-
-  .companies li.selected {
-    cursor: pointer;
-    background: var(--gray-bg);
-    color: var(--accent-color);
-    font-weight: bold;
-    border-left: 1px solid var(--accent-color);
-  }
-
-  .details {
-    width: 80%;
-    padding-left: 10px;
-  }
-
-  .details h3 {
-    margin: 0;
-    font-weight: bold;
-    font-size: 0.9rem;
-  }
-  .details h4 {
-    /* margin: 0; */
-    font-weight: bold;
-    font-size: 0.7rem;
-  }
-  .details .period {
-    font-size: 0.6rem;
-  }
-  .details .exp-details {
-    text-align: justify;
-    font-size: 0.7rem;
-  }
-
-  /* SKILLS */
-  .skill-container {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .category ul {
-    list-style: none;
-    padding: 10px;
-    margin: 0;
-  }
-
-  .category li {
-    font-size: small;
-    list-style: none;
-    cursor: pointer;
-    padding: 10px 20px;
-    border-left: 1px solid var(--texture-color);
-  }
-  .category li:hover {
-    cursor: pointer;
-    background: var(--gray-bg);
-    color: var(--accent-color);
-    font-weight: bold;
-    transition: 1s;
-  }
-
-  .category li.selected {
-    cursor: pointer;
-    background: var(--gray-bg);
-    color: var(--accent-color);
-    font-weight: bold;
-    border-left: 1px solid var(--accent-color);
-  }
-
-  .tools {
-    width: 80%;
-    padding-left: 20px;
-  }
-
-  .tools h4 {
-    margin: 0;
-    font-weight: bold;
-    font-size: 0.7rem;
-  }
-
-  .tools ul {
-    list-style: none;
-    font-size: 0.7rem;
-  }
-
-  /* DEGREE */
-  .ed-container {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .degree ul {
-    list-style: none;
-    padding: 10px;
-    margin: 0;
-  }
-
-  .degree li {
-    font-size: small;
-    list-style: none;
-    cursor: pointer;
-    padding: 10px 20px;
-    border-left: 1px solid var(--texture-color);
-  }
-  .degree li:hover {
-    cursor: pointer;
-    background: var(--gray-bg);
-    color: var(--accent-color);
-    font-weight: bold;
-    transition: 1s;
-  }
-
-  .degree li.selected {
-    cursor: pointer;
-    background: var(--gray-bg);
-    color: var(--accent-color);
-    font-weight: bold;
-    border-left: 1px solid var(--accent-color);
-  }
-
-  .degree-details {
-    width: 80%;
-    padding-left: 20px;
-  }
-
+  .tools h4,
+  .details h3,
   .degree-details h4 {
-    margin: 0;
-    font-weight: bold;
-    font-size: 0.7rem;
+    font-size: 1rem;
   }
-  .degree-details h3 {
-    font-weight: bold;
-    font-size: 0.6rem;
-  }
-  .degree-details i {
-    font-size: 0.6rem;
-  }
+
+  .tools div,
+  .details .exp-details,
   .degree-details .exp-details {
-    text-align: justify;
+    font-size: 0.95rem;
+  }
+
+  .contact-section p,
+  .contact-section li a {
+    font-size: 0.95rem;
   }
 }
