@@ -266,30 +266,28 @@
 
     <script src="assets/scripts/scripts.js"></script>
     <script>
-      const form = document.getElementById("contact-form");
-      const responseEl = document.getElementById("form-response");
-
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        const formData = new FormData(form);
-
-        fetch(
-          "https://script.google.com/macros/s/AKfycbxd1oPHASdd6i1gxEFABYAe9IHzL3AiPn1ZUdhDyhio1fYOiwKv2lrNXkCH1Nm9fITk/exec",
-          {
-            method: "POST",
-            body: formData,
-          }
-        )
-          .then((res) => res.json())
-          .then((data) => {
-            responseEl.textContent = "Message sent successfully!";
-            form.reset();
-          })
-          .catch((err) => {
-            responseEl.textContent = "Failed to send message.";
-            console.error("Error:", err);
-          });
-      });
+      document
+        .getElementById("contact-form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          const form = e.target;
+          const formData = new FormData(form);
+          fetch(
+            "https://script.google.com/macros/s/AKfycbytmzXcGH5Av6ajwlxC1oK1g_TK4m50uKL-y1O9Vm-9fUzIhc8aHJUOH-EsdGpuIyyb/exec",
+            { method: "POST", body: formData }
+          )
+            .then((res) => res.text())
+            .then((data) => {
+              document.getElementById("form-response").textContent =
+                "Message sent!";
+              form.reset();
+            })
+            .catch((err) => {
+              console.error(err);
+              document.getElementById("form-response").textContent =
+                "Error. Try again.";
+            });
+        });
     </script>
   </body>
 </html>
