@@ -3,26 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blog — Jahid Hassan Shamim</title>
-    <link rel="stylesheet" href="../assets/styles/style.css" />
-    <link rel="stylesheet" href="../assets/styles/blog.css" />
+    <title>Blog Post — Jahid Hassan Shamim</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="../assets/styles/style.css" />
+    <link rel="stylesheet" href="../assets/styles/blog.css" />
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   </head>
   <body>
     <div class="page-wrapper">
       <header class="site-header">
         <div class="header-container">
-          <div class="logo"><a href="/">← Home</a><span>.</span></div>
+          <div class="logo"><a href="/blog">← Blog</a><span>.</span></div>
           <nav class="site-nav">
+            <a href="/">Home</a>
             <a href="/#about">About</a>
-            <a href="/#experience">Experience</a>
             <a href="/#contact">Contact</a>
           </nav>
         </div>
@@ -30,10 +27,7 @@
 
       <div class="content-container">
         <div class="content">
-          <section>
-            <h1>All Blog Posts</h1>
-            <div class="blog-container grid" id="allBlogList"></div>
-          </section>
+          <article id="blogContent" style="padding-top: 6rem"></article>
         </div>
       </div>
 
@@ -115,7 +109,30 @@
       </footer>
     </div>
 
-    <script src="/assets/scripts/blogs.js"></script>
-    <script src="/assets/scripts/scripts.js"></script>
+    <script>
+      // Get slug from query param: ?slug=post-name
+      const urlParams = new URLSearchParams(window.location.search);
+      const slug = urlParams.get("slug");
+
+      if (slug) {
+        fetch(`posts/${slug}.md`)
+          .then((res) => {
+            if (!res.ok) throw new Error("Post not found.");
+            return res.text();
+          })
+          .then((markdown) => {
+            document.getElementById("blogContent").innerHTML =
+              marked.parse(markdown);
+          })
+          .catch((err) => {
+            document.getElementById(
+              "blogContent"
+            ).innerHTML = `<p style="text-align:center; color:red;">${err.message}</p>`;
+          });
+      } else {
+        document.getElementById("blogContent").innerHTML =
+          "<p style='text-align:center;'>Invalid blog URL</p>";
+      }
+    </script>
   </body>
 </html>
