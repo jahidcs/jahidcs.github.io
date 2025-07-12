@@ -182,3 +182,36 @@ fetch("/assets/json/data.json")
   .catch((error) => {
     console.error("Error fetching data:", error);
   });
+
+// Blog Scripts
+fetch("assets/json/posts.json")
+  .then((res) => res.json())
+  .then((posts) => {
+    const container = document.getElementById("blogPreviewContainer");
+
+    // Shuffle and pick 1–4
+    const selected = posts.sort(() => 0.5 - Math.random()).slice(0, 4);
+
+    selected.forEach((post) => {
+      const html = `
+        <a href="/blog/posts/${post.slug}.html" class="blog-card">
+          <div class="blog-meta">
+            <span class="blog-date">${new Date(post.date).toLocaleDateString(
+              "en-GB",
+              {
+                day: "2-digit",
+                month: "short",
+                year: "numeric",
+              }
+            )}</span>
+            <span class="blog-tags">${post.tags
+              .map((tag) => `<span class="tag">${tag}</span>`)
+              .join(" ")}</span>
+          </div>
+          <h3 class="blog-title">${post.title}</h3>
+          <p class="blog-summary">${post.summary}</p>
+        </a>
+      `;
+      container.innerHTML += html;
+    });
+  });
