@@ -570,21 +570,120 @@ body {
     font-size: 0.85rem;
   }
 
-  .tools h4,
-  .details h3,
-  .degree-details h4 {
+  .experience-container,
+  .skill-container,
+  .ed-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .companies,
+  .category,
+  .degree {
+    margin-right: 0.4rem;
+    width: 30%;
+  }
+  .companies ul,
+  .degree ul,
+  .category ul {
+    padding: 5px;
+    margin: 0;
+  }
+
+  .companies li,
+  .degree li,
+  .category li {
+    list-style: none;
+    font-size: 0.85rem;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-left: 1px solid var(--texture-color);
+  }
+  .companies li:hover,
+  .category li:hover,
+  .degree li:hover {
+    cursor: pointer;
+    background: var(--gray-bg);
+    color: var(--accent-color);
+    font-weight: 400;
+    transition: 1s;
+  }
+
+  .companies li.selected,
+  .category li.selected,
+  .degree li.selected {
+    cursor: pointer;
+    background: var(--gray-bg);
+    color: var(--accent-color);
+    font-weight: 400;
+    border-left: 1px solid var(--accent-color);
+  }
+
+  .details,
+  .tools,
+  .degree-details {
+    width: 100%;
+  }
+
+  /* Experience */
+
+  .details h3 {
+    margin: 0;
+    font-weight: 500;
     font-size: 1rem;
+    line-height: 0.5;
+  }
+  .details h4 {
+    font-weight: 500;
+    font-size: 0.9rem;
+    line-height: 0.2;
+  }
+  .details .period {
+    font-size: 0.8rem;
+    line-height: 0.5;
+  }
+  .details .exp-details {
+    line-height: 1.5;
+    text-align: justify;
+    list-style: none;
+    font-size: 0.85rem;
   }
 
-  .tools div,
-  .details .exp-details,
+  /* SKILLS */
+
+  .tools h4 {
+    margin: 0;
+    font-weight: 500;
+    font-size: 0.9rem;
+  }
+
+  .tools div {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    list-style: none;
+    line-height: 1.2;
+  }
+
+  /* DEGREE */
+
+  .degree-details h4 {
+    margin: 0;
+    font-weight: 400;
+    font-size: 0.9rem;
+  }
+  .degree-details h3 {
+    font-weight: 400;
+    font-size: 0.85rem;
+  }
+  .degree-details i {
+    font-size: 0.75rem;
+  }
   .degree-details .exp-details {
-    font-size: 0.95rem;
+    text-align: justify;
   }
 
-  .contact-section p,
-  .contact-section li a {
-    font-size: 0.95rem;
+  .footer-links a {
+    font-size: 0.85rem;
   }
 }
 
