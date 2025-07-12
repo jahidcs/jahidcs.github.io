@@ -14,7 +14,7 @@
   "skill": [
     {
       "category": "Language",
-      "tools": ["Python", "JavaScript", "Dart"]
+      "tools": ["Python", "Dart"]
     },
     {
       "category": "Framework",
