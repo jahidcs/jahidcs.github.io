@@ -87,7 +87,7 @@ fetch("../assets/json/data.json")
 document
   .getElementById("download-resume")
   .addEventListener("click", async () => {
-    const res = await fetch("assets/json/data.json");
+    const res = await fetch("../assets/json/data.json");
     const data = await res.json();
 
     const contactList = [
