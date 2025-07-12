@@ -16,7 +16,7 @@ fetch("../assets/json/data.json")
         `<a href="https://${data.contact.portfolio}" target="_blank" <a style="color: #555; text-decoration: none;">${data.contact.portfolio}</a>`,
     ]
       .filter(Boolean)
-      .join(' <span style="color: #aaa;"> &bull; </span> ');
+      .join(' <span style="color: #aaa;"> | </span> ');
 
     const header = `
       <h1>${data.name}</h1>
@@ -39,7 +39,7 @@ fetch("../assets/json/data.json")
           .map(
             (exp) => `
             <div>
-            <p><strong>${exp.organization}</strong> — ${exp.position}</p>
+            <p><strong>${exp.position} — ${exp.organization}</strong></p>
             <div class="meta-row">
                 <span class="meta-left">${exp.start} – ${exp.end}</span>
                 <span class="meta-right">${exp.location}</span>
@@ -98,7 +98,7 @@ document
       data.contact.portfolio,
     ]
       .filter(Boolean)
-      .join("   •   ");
+      .join(" | ");
 
     const allSkills = data.skill.flatMap((skill) => skill.tools);
     const uniqueSkills = [...new Set(allSkills)];
@@ -147,7 +147,7 @@ document
 
         section("Experience"),
         ...data.experience.slice(0, 3).flatMap((exp) => [
-          { text: `${exp.organization} — ${exp.position}`, style: "jobTitle" },
+          { text: `${exp.position} — ${exp.organization}`, style: "jobTitle" },
           {
             columns: [
               {
