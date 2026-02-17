@@ -1,0 +1,22 @@
+/* Push content below fixed header */
+.content-container > .content > section:first-of-type {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+/* Blog page heading */
+.content-container h1 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  color: var(--text);
+}
+
+/* Blog grid */
+.blog-container.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  max-width: 1080px;
+  margin: 0 auto;
+}
