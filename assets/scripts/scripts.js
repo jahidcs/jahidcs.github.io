@@ -194,7 +194,7 @@ fetch("assets/json/posts.json")
 
     selected.forEach((post) => {
       const html = `
-        <a href="/blog/posts/${post.slug}.html" class="blog-card">
+        <a href="/blog/post.html?slug=${post.slug}" class="blog-card">
           <div class="blog-meta">
             <span class="blog-date">${new Date(post.date).toLocaleDateString(
               "en-GB",
